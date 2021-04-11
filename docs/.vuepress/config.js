@@ -10,18 +10,24 @@ module.exports = {
     lineNumbers: true // 代码块显示行号
   },
   themeConfig: {
-    lastUpdated: 'Last Updated',
+    lastUpdated: '上次更新时间',
     smoothScroll: true,
+    repo: 'https://github.com/perfectSymphony/notes.git',
+    docsRepo: 'https://github.com/perfectSymphony/notes',
+    docsDir: 'docs',
+    ocsBranch: 'master',
+    editLinks: true,
+    editLinkText: '在GitHub上编辑此页',
     nav:[ // 导航栏配置
-      {text: '前端基础', link: '/accumulate/' },
-      {text: '算法题库', link: '/algorithm/'},
-      {text: '微博', link: 'https://baidu.com'}      
+      {text: '博客园', link: 'https://www.cnblogs.com/myprogramer/' },
+      // {text: '算法题库', link: '/algorithm/'},
+      // {text: '微博', link: 'https://baidu.com'}      
     ],
     sidebar: [
       {
         title: 'HTML',   // 必要的
         collapsable: false, // 可选的, 默认值是 true,
-        sidebarDepth: 1,    // 可选的, 默认值是 1
+        sidebarDepth: 3,    // 可选的, 默认值是 1
         children: [
           '/html_docs/html相关面试题',
           '/html_docs/table使用总结',
@@ -31,7 +37,7 @@ module.exports = {
       {
         title: 'CSS',   
         collapsable: true,
-        sidebarDepth: 1,
+        sidebarDepth: 3,
         children: [
           '/css_docs/CSS中的BFC详解',
           '/css_docs/移动端Web页面适配方案',
@@ -51,7 +57,7 @@ module.exports = {
       {
         title: 'JavaScript',
         collapsable: true,
-        sidebarDepth: 1,
+        sidebarDepth: 3,
         children: [ 
           '/js_docs/变量提升必须注意的问题',
           '/js_docs/typeof与instanceof区别',
@@ -85,7 +91,7 @@ module.exports = {
       {
         title: 'vue',   
         collapsable: true,
-        sidebarDepth: 1,
+        sidebarDepth: 3,
         children: [
           '/vue_docs/Vue Router的params和query传参的使用和区别',
           '/vue_docs/vue的双向绑定原理及实现',
@@ -102,7 +108,7 @@ module.exports = {
       {
         title: 'webpack',   
         collapsable: true,
-        sidebarDepth: 1,
+        sidebarDepth: 3,
         children: [
           '/webpack/webpack性能优化——DLL',
           '/webpack/webpack相关面试题',
@@ -111,7 +117,7 @@ module.exports = {
       {
         title: 'uni-app',   
         collapsable: true,
-        sidebarDepth: 1,
+        sidebarDepth: 3,
         children: [
           '/uni-app/uni-app利用rich-text展示富文本内容,图片的宽度溢出屏幕',
         ]
@@ -119,7 +125,7 @@ module.exports = {
       {
         title: 'React',   
         collapsable: true,
-        sidebarDepth: 1,
+        sidebarDepth: 3,
         children: [
           '/react_docs/React的生命周期',
         ]
@@ -127,7 +133,7 @@ module.exports = {
       {
         title: 'NodeJS',   
         collapsable: true,
-        sidebarDepth: 1,
+        sidebarDepth: 3,
         children: [
           '/node_docs/NodeJS优缺点及适用场景讨论',
         ]
@@ -135,7 +141,7 @@ module.exports = {
       {
         title: 'GIT',   
         collapsable: true,
-        sidebarDepth: 1,
+        sidebarDepth: 3,
         children: [
           '/git_docs/详解git pull和git fetch的区别',
           '/git_docs/git stash的用法总结',
@@ -144,7 +150,7 @@ module.exports = {
       {
         title: 'Nginx',   
         collapsable: true,
-        sidebarDepth: 1,
+        sidebarDepth: 3,
         children: [
           '/nginx/Nginx正向代理与反向代理',
           '/nginx/nginx的gzip设置详解',
@@ -153,7 +159,7 @@ module.exports = {
       {
         title: 'HTTP',   
         collapsable: true,
-        sidebarDepth: 1,
+        sidebarDepth: 3,
         children: [
           '/http/HTTP和HTTPS的区别',
           '/http/揭秘简单请求和复杂请求',
@@ -164,7 +170,7 @@ module.exports = {
       {
         title: '跨域',   
         collapsable: true,
-        sidebarDepth: 1,
+        sidebarDepth: 3,
         children: [
           '/cross-domain/jsonp原理',
           '/cross-domain/关于跨域,以及跨域的几种方式',
@@ -174,7 +180,7 @@ module.exports = {
       {
         title: '网络',   
         collapsable: true,
-        sidebarDepth: 1,
+        sidebarDepth: 3,
         children: [
           '/network/理解cookie、session、token',
         ]
@@ -182,7 +188,7 @@ module.exports = {
       {
         title: '性能优化',   
         collapsable: true,
-        sidebarDepth: 1,
+        sidebarDepth: 3,
         children: [
           '/optimization/前端性能优化的七大手段',
           '/optimization/浅谈js防抖和节流',
@@ -191,7 +197,7 @@ module.exports = {
       {
         title: '数据结构与算法',   
         collapsable: true,
-        sidebarDepth: 1,
+        sidebarDepth: 3,
         children: [
           '/accumulate/时间复杂度和空间复杂度如何计算？',
           '/accumulate/两数之和',
@@ -201,7 +207,7 @@ module.exports = {
       {
         title: '架构',   
         collapsable: true,
-        sidebarDepth: 1,
+        sidebarDepth: 3,
         children: [
           '/structure/BFF架构设计',
           '/structure/微前端架构理念',
@@ -211,7 +217,7 @@ module.exports = {
       {
         title: '概念篇',   
         collapsable: true,
-        sidebarDepth: 1,
+        sidebarDepth: 3,
         children: [
           '/concept/吞吐量（TPS）、QPS、并发数、响应时间（RT）概念',
         ]
@@ -219,7 +225,7 @@ module.exports = {
       {
         title: '正则表达式',   
         collapsable: true,
-        sidebarDepth: 1,
+        sidebarDepth: 3,
         children: [
           '/RegEx/前端常用60余种工具方法',
         ]
@@ -227,7 +233,7 @@ module.exports = {
       {
         title: '移动直播',   
         collapsable: true,
-        sidebarDepth: 1,
+        sidebarDepth: 3,
         children: [
           '/live/RTC原理',
           '/live/JsBridge使用和原理'
@@ -236,7 +242,7 @@ module.exports = {
       {
         title: '问题记录',   
         collapsable: true,
-        sidebarDepth: 1,
+        sidebarDepth: 3,
         children: [
           '/problem-record/vue单页应用刷新网页后vuex的state数据丢失的解决方案',
           '/problem-record/Cannot assign to read only property exports of object'
@@ -245,7 +251,7 @@ module.exports = {
       {
         title: '语录篇',   
         collapsable: true,
-        sidebarDepth: 1,
+        sidebarDepth: 3,
         children: [
           '/philosophy/语录篇一',
         ]

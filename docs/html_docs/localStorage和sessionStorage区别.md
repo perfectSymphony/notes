@@ -1,0 +1,10 @@
+## localStorage和sessionStorage区别
+
+localStorage 和 sessionStorage一样都是用来存储客户端临时信息的对象。
+
+他们均只能存储字符串类型的对象(虽然规范中可以存储其他类型的对象，但是目前位置没有浏览器对其进行实现)。
+localStorage生命周期是永久的，这意味着用户除非在浏览器上清除localStorage信息，否则，这些信息将永远存在。
+sessionStorage生命周期为当前窗口或者当前标签页，一旦窗口或者标签页被永久关闭，那么所有通过sessionStorage存储的数据也就被清空了。
+
+不同的浏览器无法共享localStorage或者sessionStorage中的信息。相同浏览器的不同页面间可以共享相同的localStorage(页面属于相同域名和端口)，但是不同页面或者标签页间无法共享sessionStorage的信息。这里需要注意，页面及标签仅指顶级窗口，如果标签页包含多个iframe标签且他们属于同源页面，那么他们之间可以共享sessionStorage的。
+

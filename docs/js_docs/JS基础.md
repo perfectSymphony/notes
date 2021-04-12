@@ -140,7 +140,7 @@ undefined、Null、String、Boolean、Number
 
 ### 五、闭包
 
-{% post_link 谈谈对闭包的理解 %}
+[谈谈对闭包的理解](谈谈对闭包的理解.md)
 
 ### 六、作用域、原型、原型链、继承
 
@@ -323,12 +323,11 @@ function isArray(){
 [如何形象地解释 JavaScript 中 map、foreach、reduce 间的区别？](https://www.zhihu.com/question/24927450)
 
 ### 十、promise
-
-{% post_link Promise精选 %}
+[Promise精选](./Promise精选.md)
 
 ### 十一、事件循环
 
-{% post_link JS事件循环机制-event-loop-之宏任务、微任务 %}
+[JS事件循环机制-event-loop-之宏任务、微任务](JS事件循环机制-event-loop-之宏任务、微任务.md)
 
 ### 十二、对数组进行扁平化、排序、去重
 

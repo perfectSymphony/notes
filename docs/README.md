@@ -3,7 +3,7 @@ home: true
 heroImage: /bg.jpeg
 heroText: perfectSymphony  ∂  博客
 tagline: 
-actionText: 赶快开始 →
+actionText: 快速上手 →
 actionLink: /guide/guide
 features:
 # - title: 

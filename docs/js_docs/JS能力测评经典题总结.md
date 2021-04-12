@@ -776,7 +776,7 @@ function partialUsingArguments(fn){
   }
 }
 ```
-### 29、柯里化 ({% post_link 什么是函数柯里化 %})
+### 29、柯里化 ([什么是函数柯里化](./什么是函数柯里化.md))
 
 
 [![BS466U.jpg](https://s1.ax1x.com/2020/10/20/BS466U.jpg)](https://imgchr.com/i/BS466U)

@@ -4,7 +4,8 @@ node_js:
 install:
   - npm install # npm ci
 script:
-  - npm run build 
+  # - npm run build
+  - npm run deploy 
 deploy:
   provider: pages
   skip_cleanup: true

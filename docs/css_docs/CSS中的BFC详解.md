@@ -8,7 +8,7 @@ BFC（Block Formatting Context）格式化上下文，是web页面中盒模型�
 
 1、浮动元素，float除none以外的值。<br />
 2、定位元素，position（absolute、fixed）。<br />
-3、display为以下其中之一的值inline-block、table-cell、table-table-caption。<br />
+3、display为以下其中之一的值inline-block、table-cell、table-caption。<br />
 4、overflow除了 visible 以外的值（hidden、auto、scroll）。<br />
 
 ## 三、BFC的特性
@@ -25,7 +25,7 @@ BFC（Block Formatting Context）格式化上下文，是web页面中盒模型�
 
 ### （1）BFC中的盒子对齐
 
-特性的第一条是：内部的Box（块级元素）会在垂直方向上一个接一个的放置。（这条特性不必纠结，即便不在BFC里块级盒子也会垂直排列）
+特性的第一条是：内部的Box（块级元素）会在垂直方向上一个接一个的放置。（即便不在BFC里块级盒子也会垂直排列）
 
 ### （2）外边距折叠
 
@@ -38,8 +38,8 @@ html:
 
 ```sh
     <div class="container">
-        <div class="box"></div>
-        <div class="box"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
     </div>
 ```
 
@@ -182,7 +182,7 @@ css:
 
 也可以用来防止字体环绕：
 
-众所周知，浮动的盒子会遮盖下面的盒子，但是下面盒子里的文字是不会被遮盖的，文字反而还会环绕浮动的盒子。这也是一个比较有趣的特性。
+众所周知，浮动的盒子会遮盖下面的盒子，但是下面盒子里的文字是不会被遮盖的，文字反而还会环绕浮动的盒子。
 
 ![aYrjSg.png](https://s1.ax1x.com/2020/08/02/aYrjSg.png)
 
@@ -232,6 +232,6 @@ css:
 
 （4）BFC包含浮动的块
 
-利用overflow:hidden清除浮动嘛，因为浮动的盒子无法撑出处于标准文档流的父盒子的height。这个就不过多解释了。
+利用overflow:hidden清除浮动，因为浮动的盒子无法撑出处于标准文档流的父盒子的height。这个就不过多解释了。
 
 如果你有任何想要补充的欢迎[issues](https://github.com/perfectSymphony/FrontEnd-interview/issues)

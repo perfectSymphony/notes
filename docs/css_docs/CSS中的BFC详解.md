@@ -232,6 +232,4 @@ css:
 
 （4）BFC包含浮动的块
 
-利用overflow:hidden清除浮动，因为浮动的盒子无法撑出处于标准文档流的父盒子的height。这个就不过多解释了。
-
-如果你有任何想要补充的欢迎[issues](https://github.com/perfectSymphony/FrontEnd-interview/issues)
+利用overflow:hidden清除浮动，因为浮动的盒子无法撑出处于标准文档流的父盒子的height。

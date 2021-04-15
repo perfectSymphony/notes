@@ -7,8 +7,8 @@
   - 特性：table是一个整体，每一列td的宽度是由其中一个最长td的宽度决定的。
   - 解决：一定要在table标签上加word-wrap: break-word; word-break: break-all;之后再设置百分比宽度就可以生效了(如果你用的bootstrap，可以添加col-md-1)
 
-[DpvwdS.png](https://s3.ax1x.com/2020/11/13/DpvwdS.png)
-[DpvWZT.png](https://s3.ax1x.com/2020/11/13/DpvWZT.png)
+![DpvwdS.png](https://s3.ax1x.com/2020/11/13/DpvwdS.png)
+![DpvWZT.png](https://s3.ax1x.com/2020/11/13/DpvWZT.png)
 
   # 让一个元素相对于父元素固定定位
 

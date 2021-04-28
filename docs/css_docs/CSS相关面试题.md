@@ -76,8 +76,6 @@
     position: relative;
 }
 .inner-box {
-    /* width: 200px;
-    height: 100px; */
     background:#f90;
     position: absolute;
     top: 50%;
@@ -88,9 +86,9 @@
 </style>
 <body>
     <div class="box">
-        <dov class="inner-box">
+        <div class="inner-box">
           content
-        </dov>
+        </div>
     </div>
 </body>
 </html>
@@ -149,7 +147,6 @@ border-sizing: border-box;
 盒子的实际大小为：宽 200px、高 50px
 ```
 
-
 ## 浏览器兼容问题
 由于IE浏览器使用自己的非标准模型。IE浏览器的 width 属性不是内容的宽度，而是内容、内边距和边框的宽度的总和。虽然有方法解决这个问题。但是目前最好的解决方案是回避这个问题。解决IE8及更早版本不兼容问题可以在HTML页面声明 即可。就是要在网页的顶部加上DOCTYPE声明。
 
@@ -158,7 +155,6 @@ border-sizing: border-box;
 ```sh
 <style>
     /* flex方式实现 */
-
     .box {
         display: flex;
         # justify-content: center;
@@ -190,7 +186,6 @@ border-sizing: border-box;
 ```sh
 <style>
     /* 浮动方式，此方式 content 必须放在最下边 */
-
     .box {
         height: 200px;
     }
@@ -223,7 +218,6 @@ border-sizing: border-box;
 ```sh
 <style>
     /* 绝对定位的方式实现 */
-
     .box {
         position: relative;
         height: 200px;
@@ -249,7 +243,6 @@ border-sizing: border-box;
         right: 0;
         background: #ff0;
     }
-    /*  */
 </style>
 <body>
     <div class="box">
@@ -289,13 +282,13 @@ border-sizing: border-box;
 
 ## 只要一行代码实现CSS五种经典布局
 
-> 这几个布局都是自适应的，自动适配桌面设备和移动设备。代码实现很简单，核心代码只有一行，有很大的学习价值，内容也很实用。
-我会用到 CSS 的 [Flex 语法](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)和 [Grid 语法](http://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html)，每一个布局都带有 CodePen 示例。
+> 以下这几个布局都是自适应的，自动适配桌面设备和移动设备。代码实现简单、实用，核心代码只有一行。
+我会用到 CSS 的 [Flex 语法](flex.md)和 [Grid 语法](flex.md)。
 
 
 ### 一、空间居中布局
 
-空间居中布局指的是，不管容器的大小，项目总是占据中心点。
+空间居中布局：不管容器的大小，项目总是占据中心点。
 
 CSS代码如下([CodePen 示例](https://codepen.io/una/pen/YzyYbBx))
 

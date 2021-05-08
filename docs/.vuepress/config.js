@@ -103,6 +103,7 @@ module.exports = {
           '/vue_docs/Vue的异步更新实现原理',
           '/vue_docs/Vue项目性能优化总结',
           '/vue_docs/vue进阶之路-vue3新特性',
+          '/vue_docs/vue3面试中必问的5个考点',
         ]
       },
       {

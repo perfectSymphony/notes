@@ -86,6 +86,7 @@ module.exports = {
           '/js_docs/浏览器与Node的事件循环有何区别',
           '/js_docs/异步编程实现任务调度器',
           '/js_docs/javascript面试题七问七答',
+          '/js_docs/JavaScript提升代码质量的最佳实践列表',
          ],
       },
       {

@@ -132,11 +132,7 @@ EventUtil.addEvent(btn,click,handler);
 
 ### 四、数据类型
 
-1、基本数据类型：
-undefined、Null、String、Boolean、Number
-
-2、数据封装对象：Object、Array、Boolean、Number、String
-3、其他对象：Math、Date、Function、Error、RegExp、Arguments
+[js基本数据类型有哪些，有什么区别？](js基本数据类型有哪些，有什么区别？.md)
 
 ### 五、闭包
 

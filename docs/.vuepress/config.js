@@ -66,7 +66,7 @@ module.exports = {
           '/js_docs/事件循环机制相关问题总结',
           '/js_docs/彻底搞懂JS中的prototype、__proto__与constructor',
           '/js_docs/ES6遍历数组和对象的方法总结',
-          '/js_docs/js基本数据类型有哪些，有什么区别？',
+          '/js_docs/JS数据类型有哪些，有什么区别？',
           '/js_docs/解决JavaScript中0.1+0.2不等于0.3的问题',
           '/js_docs/ES6中的Set和Map',
           '/js_docs/谈谈对闭包的理解',

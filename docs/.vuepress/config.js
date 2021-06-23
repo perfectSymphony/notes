@@ -256,6 +256,7 @@ module.exports = {
         sidebarDepth: 3,
         children: [
           '/philosophy/语录篇一',
+          '/philosophy/语录篇二',
         ]
       },                                                       
     ], // 侧边栏配置

@@ -110,11 +110,11 @@ webpack的热更新又称热替换（Hot Module Replacement），缩写为HMR。
 
 ## 10.如何提高webpack的构建速度？
 
-1、多入口情况下，使用CommonsChunkPlugin来提取公共代码
-2、通过externals配置来提取常用库
-3、利用DllPlugin和DllReferencePlugin预编译资源模块 通过DllPlugin来对那些我们引用但是绝对不会修改的npm包来进行预编译，再通过DllReferencePlugin将预编译的模块加载进来。
-4、使用Happypack 实现多线程加速编译
-5、使用webpack-uglify-parallel来提升uglifyPlugin的压缩速度。 原理上webpack-uglify-parallel采用了多核并行压缩来提升压缩速度
+1、多入口情况下，使用CommonsChunkPlugin来提取公共代码<br/>
+2、通过externals配置来提取常用库<br/>
+3、利用DllPlugin和DllReferencePlugin预编译资源模块 通过DllPlugin来对那些我们引用但是绝对不会修改的npm包来进行预编译，再通过DllReferencePlugin将预编译的模块加载进来。<br/>
+4、使用Happypack 实现多线程加速编译<br/>
+5、使用webpack-uglify-parallel来提升uglifyPlugin的压缩速度。 原理上webpack-uglify-parallel采用了多核并行压缩来提升压缩速度<br/>
 6、使用Tree-shaking和Scope Hoisting来剔除多余代码
 
 ## 11.怎么配置单页应用？怎么配置多页应用？
@@ -133,10 +133,10 @@ webpack的热更新又称热替换（Hot Module Replacement），缩写为HMR。
 
  NPM模块需要注意以下问题：
 
-1、要支持CommonJS模块化规范，所以要求打包后的最后结果也遵守该规则。
-2、Npm模块使用者的环境是不确定的，很有可能并不支持ES6，所以打包的最后结果应该是采用ES5编写的。并且如果ES5是经过转换的，请最好连同SourceMap一同上传。
-3、Npm包大小应该是尽量小（有些仓库会限制包大小）
-4、发布的模块不能将依赖的模块也一同打包，应该让用户选择性的去自行安装。这样可以避免模块应用者再次打包时出现底层模块被重复打包的情况。
+1、要支持CommonJS模块化规范，所以要求打包后的最后结果也遵守该规则。<br/>
+2、Npm模块使用者的环境是不确定的，很有可能并不支持ES6，所以打包的最后结果应该是采用ES5编写的。并且如果ES5是经过转换的，请最好连同SourceMap一同上传。<br/>
+3、Npm包大小应该是尽量小（有些仓库会限制包大小）<br/>
+4、发布的模块不能将依赖的模块也一同打包，应该让用户选择性的去自行安装。这样可以避免模块应用者再次打包时出现底层模块被重复打包的情况。<br/>
 5、UI组件类的模块应该将依赖的其它资源文件，例如.css文件也需要包含在发布的模块里。
 
 基于以上需要注意的问题，我们可以对于webpack配置做以下扩展和优化：

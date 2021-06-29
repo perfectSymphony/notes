@@ -302,10 +302,15 @@ Node 端的处理过程如下：
 ### 参考文章
 
  [浏览器进程？线程？傻傻分不清楚！](https://imweb.io/topic/58e3bfa845e5c13468f567d5)
+
  [事件循环机制的那些事](https://mp.weixin.qq.com/s/PBX_YHw0-f3bbSDH5ZbbJQ?)
+
  [前端性能优化原理与实践](https://juejin.cn/book/6844733750048210957)
+
  [前端面试之道](https://juejin.cn/book/6844733763675488269/section/6844733763763568654#heading-3)
 
  [深入理解js事件循环机制（Node.js篇）](http://lynnelv.github.io/js-event-loop-nodejs)
+
  [详解JavaScript中的Event Loop（事件循环）机制](https://zhuanlan.zhihu.com/p/33058983)
+ 
  [event-loop-timers-and-nexttick](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/)

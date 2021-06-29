@@ -10,28 +10,6 @@ Foo.prototype.getName = function () { alert (3);};
 var getName = function () { alert (4);};
 function getName() { alert (5);}
  
-//请写出以下输出结果：
-Foo.getName();
-getName();
-Foo().getName();
-getName();
-new Foo.getName();
-new Foo().getName();
-new new Foo().getName();
-```
-
-答案是：
-
-```javascript
-function Foo() {
- getName = function () { alert (1); };
- return this;
-}
-Foo.getName = function () { alert (2);};
-Foo.prototype.getName = function () { alert (3);};
-var getName = function () { alert (4);};
-function getName() { alert (5);}
- 
 //答案：
 Foo.getName();//2
 getName();//4
@@ -124,11 +102,7 @@ Foo函数的第一句  getName = function () { alert (1); };  是一句函数赋
 
 此处实际上是将外层作用域内的getName函数修改了。
 
-注意：此处若依然没有找到会一直向上查找到window对象，若window对象中也没有getName属性，就在window对象中创建一个getName变量。
-
-之后Foo函数的返回值是this，而JS的this问题博客园中已经有非常多的文章介绍，这里不再多说。
-
-简单的讲，this的指向是由所在函数的调用方式决定的。而此处的直接调用方式，this指向window对象。
+注意：此处若依然没有找到会一直向上查找到window对象，若window对象中也没有getName属性，就在window对象中创建一个getName变量。之后Foo函数的返回值是this，简单的理解，this的指向是由所在函数的调用方式决定的。而此处的直接调用方式，this指向window对象。
 
 遂Foo函数返回的是window对象，相当于执行 window.getName() ，而window中的getName已经被修改为alert(1)，所以最终会输出1
 

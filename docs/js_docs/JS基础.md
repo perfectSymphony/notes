@@ -371,6 +371,7 @@ for(let i = 0; i < newArray.length; i++){
 }
 console.log(hash)
 ```
+
 ### 十三、将数组乱序输出
 
 ```javascript
@@ -388,7 +389,6 @@ console.log(res)
 
 ```
 
-
 ```javascript
 //从数组中筛选出指定的长度、不重复的数组
 var array = [1,2,3,4,5,6,7,8,9,10]
@@ -402,6 +402,29 @@ function test(arr, n){
     console.log(resArray)
 }
 
-
 test(array, 6)
+```
+
+### 十四、url地址数据参数转化JSON对象
+
+```javascript
+// 方法一：
+    let url = "http://localhost:3000/index.html?phone=12345678901&pwd=123123";
+    function urlToJson(url){
+        let query = url.split("?")[1].split('&');
+        let obj = {}
+        for(let i of query){
+            obj[i.split("=")[0]] = i.split("=")[1]
+        }
+        return obj
+    }
+
+  let queryObj = urlToJson(url)
+  console.log(queryObj)
+
+// 方法二：
+// node.js方法之url+queryString
+
+// 方法三：
+// node.js方法之url的解构方法
 ```

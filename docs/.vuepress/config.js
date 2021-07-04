@@ -50,8 +50,8 @@ module.exports = {
           '/css_docs/前端样式导入的方式有哪些？',
           '/css_docs/css3中定位模型之position属性的使用方法',
           '/css_docs/CSS命名规范——BEM思想',
-          '/css_docs/flex之flex为1的含义',
-          '/css_docs/flex',
+          '/css_docs/flex为1的含义',
+          '/css_docs/display:inline-block元素之间空隙的产生原因和解决办法',
         ]
       },     
       {
@@ -87,6 +87,7 @@ module.exports = {
           '/js_docs/异步编程实现任务调度器',
           '/js_docs/javascript面试题七问七答',
           '/js_docs/JavaScript提升代码质量的最佳实践列表',
+          '/js_docs/null和undefined的区别',
          ],
       },
       {
@@ -94,6 +95,8 @@ module.exports = {
         collapsable: true,
         sidebarDepth: 3,
         children: [
+          '/vue_docs/Vue相关面试题',
+          '/vue_docs/vue中的mixins',
           '/vue_docs/Vue Router的params和query传参的使用和区别',
           '/vue_docs/vue的双向绑定原理及实现',
           '/vue_docs/Vue的computed和watch的细节全面分析',
@@ -204,6 +207,7 @@ module.exports = {
           '/accumulate/时间复杂度和空间复杂度如何计算？',
           '/accumulate/两数之和',
           '/accumulate/算法总结',
+          '/accumulate/比较版本号',
         ]
       }, 
       {

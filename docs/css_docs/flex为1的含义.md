@@ -1,4 +1,10 @@
-## flex之flex为1的含义
+## flex为1的含义
+
+### 参考文章
+
+[Flex 布局教程：语法篇](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)<br/>
+[Flex 布局教程：实例篇](http://www.ruanyifeng.com/blog/2015/07/flex-examples.html)<br/>
+[grid布局](http://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html)
 
 ## 一. flex是由三个属性组成:
 

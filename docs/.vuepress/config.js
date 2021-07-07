@@ -98,7 +98,6 @@ module.exports = {
           '/vue_docs/Vue相关面试题',
           '/vue_docs/vue中的mixins',
           '/vue_docs/Vue Router的params和query传参的使用和区别',
-          '/vue_docs/vue的双向绑定原理及实现',
           '/vue_docs/Vue的computed和watch的细节全面分析',
           '/vue_docs/vue实现路由按需加载的3种方式',
           '/vue_docs/vue中的router和route的区别',

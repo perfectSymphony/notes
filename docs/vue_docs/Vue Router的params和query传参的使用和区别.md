@@ -83,8 +83,8 @@ params一旦设置在路由，params就是路由的一部分，如果这个路�
 
 ## 3、总结
 
-1、传参可以使用params和query两种方式。
-2、使用params传参只能用name来引入路由，即push里面只能是name:’xxxx’,不能是path:’/xxx’,因为params只能用name来引入路由，如果这里写成了path，接收参数页面会是undefined！！！。
-3、使用query传参使用path来引入路由。
-4、params是路由的一部分,必须要在路由后面添加参数名。query是拼接在url后面的参数，没有也没关系。
+1、传参可以使用params和query两种方式。<br/>
+2、使用params传参只能用name来引入路由，即push里面只能是name:’xxxx’,不能是path:’/xxx’,因为params只能用name来引入路由，如果这里写成了path，接收参数页面会是undefined！！！。<br/>
+3、使用query传参使用path来引入路由。<br/>
+4、params是路由的一部分,必须要在路由后面添加参数名。query是拼接在url后面的参数，没有也没关系。<br/>
 5、二者还有点区别，直白的来说query相当于get请求，页面跳转的时候，可以在地址栏看到请求参数，而params相当于post请求，参数不会再地址栏中显示。

@@ -113,26 +113,24 @@ console.log(p1)
 
 - Promise.reject
 
-> 类方法，且与 resolve 唯一的不同是，返回的 promise 对象的状态为 rejected。
+类方法，且与 resolve 唯一的不同是，返回的 promise 对象的状态为 rejected。
 
  - Promise.prototype.then
 
- > 实例方法，为 Promise 注册回调函数，函数形式：fn(vlaue){}，value 是上一个任务的返回结果，then 中的函数一定要 return 一个结果或者一个新的 Promise 对象，才可以让之后的then 回调接收。
+实例方法，为 Promise 注册回调函数，函数形式：fn(vlaue){}，value 是上一个任务的返回结果，then 中的函数一定要 return 一个结果或者一个新的 Promise 对象，才可以让之后的then 回调接收。
 
  - Promise.prototype.catch
 
- > 实例方法，捕获异常，函数形式：fn(err){}, err 是 catch 注册 之前的回调抛出的异常信息。
+实例方法，捕获异常，函数形式：fn(err){}, err 是 catch 注册 之前的回调抛出的异常信息。
 
  - Promise.race
 
- > 类方法，多个 Promise 任务同时执行，返回最先执行结束的 Promise 任务的结果，不管这个 Promise 结果是成功还是失败。 
+类方法，多个 Promise 任务同时执行，返回最先执行结束的 Promise 任务的结果，不管这个 Promise 结果是成功还是失败。 
 
- - Promise.all
+ - [Promise.all](手写出场率极高的面试题.md#_21、实现promise-all-函数)
 
- ```sh
- 类方法，多个 Promise 任务同时执行。
+类方法，多个 Promise 任务同时执行。
 如果全部成功执行，则以数组的方式返回所有 Promise 任务的执行结果。 如果有一个 Promise 任务 rejected，则只返回 rejected 任务的结果。
-```
 
 ### 如何理解 Promise
 

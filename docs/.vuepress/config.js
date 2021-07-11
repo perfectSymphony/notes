@@ -71,7 +71,7 @@ module.exports = {
           '/js_docs/ES6中的Set和Map',
           '/js_docs/谈谈对闭包的理解',
           '/js_docs/JS基础',
-          '/js_docs/JS能力测评经典题总结',
+          '/js_docs/JS能力测评',
           '/js_docs/手写出场率极高的面试题',
           '/js_docs/什么是纯函数',
           '/js_docs/什么是函数柯里化',

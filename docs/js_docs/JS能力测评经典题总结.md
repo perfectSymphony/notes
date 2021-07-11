@@ -462,7 +462,7 @@ function square(arr) {
 ```
 ### 14、查找元素位置
 
-[![0Hhjr8.png](https://s1.ax1x.com/2020/10/16/0Hhjr8.png)](https://imgchr.com/i/0Hhjr8)
+![0Hhjr8.png](https://s1.ax1x.com/2020/10/16/0Hhjr8.png)
 
 ```javascript
 // 方法一  for
@@ -493,7 +493,7 @@ function findAllOccurrences(arr, target){
 
 ### 15、避免全局变量
 
-[![0HhT5d.jpg](https://s1.ax1x.com/2020/10/16/0HhT5d.jpg)](https://imgchr.com/i/0HhT5d)
+![0HhT5d.jpg](https://s1.ax1x.com/2020/10/16/0HhT5d.jpg)
 
 原代码：
 
@@ -520,7 +520,7 @@ function globals(){
 
 ### 16、正确的函数定义
 
-[![0HhzVg.png](https://s1.ax1x.com/2020/10/16/0HhzVg.png)](https://imgchr.com/i/0HhzVg)
+![0HhzVg.png](https://s1.ax1x.com/2020/10/16/0HhzVg.png)
 
 原代码：
 ```javascript
@@ -550,7 +550,7 @@ function functions(flag) {
 
 ### 17、正确的使用 parseInt
 
-[![0HhLxP.jpg](https://s1.ax1x.com/2020/10/16/0HhLxP.jpg)](https://imgchr.com/i/0HhLxP)
+![0HhLxP.jpg](https://s1.ax1x.com/2020/10/16/0HhLxP.jpg)
 
 原代码：
 
@@ -575,7 +575,7 @@ function parse2Int(num) {
 
 ### 18、完全等同
 
-[![0HhXKf.jpg](https://s1.ax1x.com/2020/10/16/0HhXKf.jpg)](https://imgchr.com/i/0HhXKf)
+![0HhXKf.jpg](https://s1.ax1x.com/2020/10/16/0HhXKf.jpg)
 
 
 ```javascript
@@ -590,7 +590,7 @@ function identity(val1, val2){
 
 ### 19、计时器
 
-[![0Hhq2t.jpg](https://s1.ax1x.com/2020/10/16/0Hhq2t.jpg)](https://imgchr.com/i/0Hhq2t)
+![0Hhq2t.jpg](https://s1.ax1x.com/2020/10/16/0Hhq2t.jpg)
 
 ```javascript
 function count(start, end){
@@ -614,7 +614,7 @@ function count(start, end){
 > setInterval(code,millisec) 方法可按照指定的周期（以毫秒计）来调用函数或计算表达式。code 是要调用的函数或要执行的代码串，millisec 是周期性执行或调用 code 之间的时间间隔，以毫秒计。setInterval() 方法会不停地调用 code 函数，直到 clearInterval() 被调用或窗口被关闭。由 setInterval() 返回的 ID 值可用作 clearInterval() 方法的参数。clearInterval() 方法可取消由 setInterval() 设置的 timeout，其中的参数必须是由 setInterval() 返回的 ID 值。
 
 ### 20、流程控制
-[![0HhHPA.jpg](https://s1.ax1x.com/2020/10/16/0HhHPA.jpg)](https://imgchr.com/i/0HhHPA)
+![0HhHPA.jpg](https://s1.ax1x.com/2020/10/16/0HhHPA.jpg)
 
 ```javascript
 function fizzBuzz(num){
@@ -633,7 +633,7 @@ function fizzBuzz(num){
 ```
 
 ### 21、函数传参
-[![BS4op6.png](https://s1.ax1x.com/2020/10/20/BS4op6.png)](https://imgchr.com/i/BS4op6)
+![BS4op6.png](https://s1.ax1x.com/2020/10/20/BS4op6.png)
 
 ```javascript
 // 方法一 apply/call
@@ -673,7 +673,7 @@ function.call(newObj[, arg1[, arg2[, [,…argN]]]]) 方法的作用和 apply() �
 
 ### 22、函数上下文
 
-[![BS4qne.jpg](https://s1.ax1x.com/2020/10/20/BS4qne.jpg)](https://imgchr.com/i/BS4qne)
+![BS4qne.jpg](https://s1.ax1x.com/2020/10/20/BS4qne.jpg)
 
 考察改变this的指向
 
@@ -693,7 +693,7 @@ function speak(fn, obj){
 
 ### 23、返回函数
 
-[![BS4T1K.jpg](https://s1.ax1x.com/2020/10/20/BS4T1K.jpg)](https://imgchr.com/i/BS4T1K)
+![BS4T1K.jpg](https://s1.ax1x.com/2020/10/20/BS4T1K.jpg)
 
 ```javascript 
 function functionFunction(str){
@@ -704,7 +704,7 @@ function functionFunction(str){
 ```
 
 ### 24、使用闭包
-[![BS4L0H.png](https://s1.ax1x.com/2020/10/20/BS4L0H.png)](https://imgchr.com/i/BS4L0H)
+![BS4L0H.png](https://s1.ax1x.com/2020/10/20/BS4L0H.png)
 
 ```javascript
 function makeClosure(arr, fn){
@@ -719,7 +719,7 @@ function makeClosure(arr, fn){
 
 ### 25、二次封装函数
 
-[![BS4R0J.png](https://s1.ax1x.com/2020/10/20/BS4R0J.png)](https://imgchr.com/i/BS4R0J)
+![BS4R0J.png](https://s1.ax1x.com/2020/10/20/BS4R0J.png)
 
 ```javascript
 function partial(fn, str1, str2){
@@ -729,7 +729,7 @@ function partial(fn, str1, str2){
 }
 ```
 ### 26、使用arguments
-[![BS4ylT.jpg](https://s1.ax1x.com/2020/10/20/BS4ylT.jpg)](https://imgchr.com/i/BS4ylT)
+![BS4ylT.jpg](https://s1.ax1x.com/2020/10/20/BS4ylT.jpg)
 
 ```javascript
 //方法一 eval
@@ -748,7 +748,7 @@ function useArguments(){
 ```
 ### 27、使用 apply 调用函数
 
-[![BleNcQ.png](https://s1.ax1x.com/2020/10/27/BleNcQ.png)](https://imgchr.com/i/BleNcQ)
+![BleNcQ.png](https://s1.ax1x.com/2020/10/27/BleNcQ.png)
 
 同21题
 ```javascript
@@ -761,7 +761,7 @@ function callIt(fn){
 
 ### 28、二次封装函数
 
-[![BS42m4.jpg](https://s1.ax1x.com/2020/10/20/BS42m4.jpg)](https://imgchr.com/i/BS42m4)
+![BS42m4.jpg](https://s1.ax1x.com/2020/10/20/BS42m4.jpg)
 
 与25题的要求区别: 入门级别
 
@@ -779,7 +779,7 @@ function partialUsingArguments(fn){
 ### 29、柯里化 ([什么是函数柯里化](./什么是函数柯里化.md))
 
 
-[![BS466U.jpg](https://s1.ax1x.com/2020/10/20/BS466U.jpg)](https://imgchr.com/i/BS466U)
+![BS466U.jpg](https://s1.ax1x.com/2020/10/20/BS466U.jpg)
 
 
 ```javascript
@@ -799,7 +799,7 @@ function curryIt(fn){
 
 ### 30、或运算
 
-[![BS44t1.jpg](https://s1.ax1x.com/2020/10/20/BS44t1.jpg)](https://imgchr.com/i/BS44t1)
+![BS44t1.jpg](https://s1.ax1x.com/2020/10/20/BS44t1.jpg)
 
 ```javascript
 function or(a, b) {
@@ -809,7 +809,7 @@ function or(a, b) {
 
 ### 31、且运算
 
-[![B8ykDS.jpg](https://s1.ax1x.com/2020/10/29/B8ykDS.jpg)](https://imgchr.com/i/B8ykDS)
+![B8ykDS.jpg](https://s1.ax1x.com/2020/10/29/B8ykDS.jpg)
 
 ```javascript
 function and(a, b) {
@@ -819,7 +819,7 @@ function and(a, b) {
 
 ### 32、模块
 
-[![BS4cXF.png](https://s1.ax1x.com/2020/10/20/BS4cXF.png)](https://imgchr.com/i/BS4cXF)
+![BS4cXF.png](https://s1.ax1x.com/2020/10/20/BS4cXF.png)
 
 ```javascript
 function createModule(str1, str2){
@@ -836,7 +836,7 @@ function createModule(str1, str2){
 
 ### 33、二进制转换(十进制转二进制)
 
-[![BS4O7d.png](https://s1.ax1x.com/2020/10/20/BS4O7d.png)](https://imgchr.com/i/BS4O7d)
+![BS4O7d.png](https://s1.ax1x.com/2020/10/20/BS4O7d.png)
 
 ```javascript
 function valueAtBit(num, bit){
@@ -853,7 +853,7 @@ function valueAtBit(num, bit){
 
 ### 34、二进制转换(二进制转十进制)
 
-[![BS4hkR.jpg](https://s1.ax1x.com/2020/10/20/BS4hkR.jpg)](https://imgchr.com/i/BS4hkR)
+![BS4hkR.jpg](https://s1.ax1x.com/2020/10/20/BS4hkR.jpg)
 
 
 ```javascript
@@ -864,7 +864,7 @@ function base10(str){
 
 ### 35、二进制转换(十进制转8位二进制)
 
-[![BS4HXD.jpg](https://s1.ax1x.com/2020/10/20/BS4HXD.jpg)](https://imgchr.com/i/BS4HXD)
+![BS4HXD.jpg](https://s1.ax1x.com/2020/10/20/BS4HXD.jpg)
 
 ```javascript
 function convertToBinary(num){
@@ -878,7 +878,7 @@ function convertToBinary(num){
 
 ### 36、乘法
 
-[![B86oy6.png](https://s1.ax1x.com/2020/10/29/B86oy6.png)](https://imgchr.com/i/B86oy6)
+![B86oy6.png](https://s1.ax1x.com/2020/10/29/B86oy6.png)
 
 ```javascript
 function multiply(a, b){
@@ -910,7 +910,7 @@ parseFloat("qwar4s2")；==>NAN
 ```
 
 ### 37、改变上下文
-[![B86WFJ.jpg](https://s1.ax1x.com/2020/10/29/B86WFJ.jpg)](https://imgchr.com/i/B86WFJ)
+![B86WFJ.jpg](https://s1.ax1x.com/2020/10/29/B86WFJ.jpg)
 
 ```javascript
 function alterContext(fn, obj) {
@@ -921,7 +921,7 @@ function alterContext(fn, obj) {
 ```
 
 ### 38、批量改变对象的属性
-[![B86TOK.png](https://s1.ax1x.com/2020/10/29/B86TOK.png)](https://imgchr.com/i/B86TOK)
+![B86TOK.png](https://s1.ax1x.com/2020/10/29/B86TOK.png)
 
 ```javascript
 function alterObjects(constructor, greeting) {
@@ -933,7 +933,7 @@ prototype 属性可以向对象添加属性和方法。这是原型链的知识�
 将 constructor 的所有实例的 greeting 属性指向给定的 greeting 变量，只需要在constructor的原型上面添加greeting属性，并指定值。
 
 ### 39、属性遍历
-[![B86bwD.png](https://s1.ax1x.com/2020/10/29/B86bwD.png)](https://imgchr.com/i/B86bwD)
+![B86bwD.png](https://s1.ax1x.com/2020/10/29/B86bwD.png)
 
 ```javascript
 //运行时间：1148ms 占用内存：77864k
@@ -976,7 +976,7 @@ function iterate(obj){
 >最后5题大部分可以用正则表达式实现，关于正则表达式可以看看 正则表达式不要背
 
 ### 40、判断是否包含数字
-[![B86fY9.png](https://s1.ax1x.com/2020/10/29/B86fY9.png)](https://imgchr.com/i/B86fY9)
+![B86fY9.png](https://s1.ax1x.com/2020/10/29/B86fY9.png)
 
 
 [String.prototype.charCodeAt()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt)
@@ -1025,7 +1025,7 @@ function containsNumber(str){
 
 ### 41、检查重复字符串
 
-[![B86hWR.png](https://s1.ax1x.com/2020/10/29/B86hWR.png)](https://imgchr.com/i/B86hWR)
+![B86hWR.png](https://s1.ax1x.com/2020/10/29/B86hWR.png)
 
 (String.prototype.charAt())[https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/charAt]
 ```javascript
@@ -1049,7 +1049,7 @@ function containsRepeatingLetter(str){
 ```
 
 ### 42、判断是否以元音字母结尾
-[![B865S1.png](https://s1.ax1x.com/2020/10/29/B865S1.png)](https://imgchr.com/i/B865S1)
+![B865S1.png](https://s1.ax1x.com/2020/10/29/B865S1.png)
 
 首先确定元音集合`[a,e,i,o,u]`，然后是以元音结尾，加上 $ ，最后通配大小写，加上i。
 
@@ -1062,7 +1062,7 @@ function endsWithVowel(str){
 
 ### 43、获取指定字符串
 
-[![B86IQx.png](https://s1.ax1x.com/2020/10/29/B86IQx.png)](https://imgchr.com/i/B86IQx)
+![B86IQx.png](https://s1.ax1x.com/2020/10/29/B86IQx.png)
 
 ```javascript
 function captureThreeNumbers(str){
@@ -1079,7 +1079,7 @@ function captureThreeNumbers(str){
 
 ### 44、判断是否符合指定格式
 
-[![B862o4.jpg](https://s1.ax1x.com/2020/10/29/B862o4.jpg)](https://imgchr.com/i/B862o4)
+![B862o4.jpg](https://s1.ax1x.com/2020/10/29/B862o4.jpg)
 
 ```javascript
 function matchesPattern(str){
@@ -1091,7 +1091,7 @@ function matchesPattern(str){
 
 ### 45、判断是否符合 USD 格式
 
-[![B86HeO.jpg](https://s1.ax1x.com/2020/10/29/B86HeO.jpg)](https://imgchr.com/i/B86HeO)
+![B86HeO.jpg](https://s1.ax1x.com/2020/10/29/B86HeO.jpg)
 
 ```javascript
 function isUSD(str) {

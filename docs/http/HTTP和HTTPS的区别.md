@@ -14,7 +14,7 @@
 
 HTTPS：<font color='red'>是以安全为目标的 HTTP 通道，是 HTTP 的安全版。HTTPS 的安全基础是 SSL。SSL 协议位于 TCP/IP 协议与各种应用层协议之间，为数据通讯提供安全支持。</font>SSL 协议可分为两层：<font>SSL 记录协议（SSL Record Protocol）</font>，它建立在可靠的传输协议（如TCP）之上，为高层协议提供数据封装、压缩、加密等基本功能的支持。<font>SSL 握手协议（SSL Handshake Protocol）</font>，它建立在 SSL 记录协议之上，用于在实际的数据传输开始前，通讯双方进行身份认证、协商加密算法、交换加密密钥等。
 
-[![6ocIRe.png](https://z3.ax1x.com/2021/03/22/6ocIRe.png)](https://imgtu.com/i/6ocIRe)
+![6ocIRe.png](https://z3.ax1x.com/2021/03/22/6ocIRe.png)
 
 <b>HTTPS 设计目标：</b>
 

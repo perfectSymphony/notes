@@ -214,7 +214,7 @@ this.$router.push({path:'/fillinformation',
 this.$route.query.applicationNo//页面跳转后获取携带参数applicationNo参数
 //此用法参数会展示在跳转地址上---图一
 ```
-[![6fj25j.png](https://s4.ax1x.com/2021/03/20/6fj25j.png)](https://imgtu.com/i/6fj25j)
+![6fj25j.png](https://s4.ax1x.com/2021/03/20/6fj25j.png)
 <font size='5' color='red'> 图一</font>
 
 ```sh
@@ -228,7 +228,7 @@ this.$router.push({
  this.$route.params.clientCode//页面跳转后获取携带参数clientCode
 //此用法参数不会展示在跳转地址--图二
 ```
-[![6fvcy6.png](https://s4.ax1x.com/2021/03/20/6fvcy6.png)](https://imgtu.com/i/6fvcy6)
+![6fvcy6.png](https://s4.ax1x.com/2021/03/20/6fvcy6.png)
 <font size='5' color='red'> 图二</font>
 
 使用location.href实现页面div块的快速定位

@@ -12,19 +12,19 @@ BFF是（Backends For Frontends）单词的缩写，主要是用于服务前端�
 
 <font size="4px" color="#f00">单端调用基础服务</font>
 
-[![sY7HS0.png](https://s3.ax1x.com/2021/01/12/sY7HS0.png)](https://imgchr.com/i/sY7HS0)
+![sY7HS0.png](https://s3.ax1x.com/2021/01/12/sY7HS0.png)
 
 传统的应用程序内提供的接口是有业务针对性的，这种类型的接口如果独立出来再提供给别的系统再次使用是一件比较麻烦的事情，设计初期的高耦合就决定了这一点。
 
 <font size="4px" color="#f00">多端直接调用基础服务</font>
 
-[![sYHKpt.png](https://s3.ax1x.com/2021/01/12/sYHKpt.png)](https://imgchr.com/i/sYHKpt)
+![sYHKpt.png](https://s3.ax1x.com/2021/01/12/sYHKpt.png)
 
 如果我们的接口同时提供给web、移动端使用，移动端仅用来采集数据以及数据的展示，而web端大多数场景是用来管理数据，因为不同端点的业务有所不同每一个端的接口复用度不会太高。
 
 <font size="4px" color="#f00">多端共用一个BFF</font>
 
-[![sYHtts.png](https://s3.ax1x.com/2021/01/12/sYHtts.png)](https://imgchr.com/i/sYHtts)
+![sYHtts.png](https://s3.ax1x.com/2021/01/12/sYHtts.png)
 
 针对多端共用服务接口的场景，我们将基础的数据服务与BFF进行了<font size="7px" color="#f00">分离</font>，数据服务仅提供数据的增删改查，并不过多涉及业务的判断处理，所有业务判断处理都交给BFF来把控，遇到的一些业务逻辑异常也同样由BFF格式化处理后展示给访问端点。
 
@@ -32,13 +32,13 @@ BFF是（Backends For Frontends）单词的缩写，主要是用于服务前端�
 
 <font size="4px" color="#f00">每个端提供一个BFF</font>
 
-[![sYH5nO.png](https://s3.ax1x.com/2021/01/12/sYH5nO.png)](https://imgchr.com/i/sYH5nO)
+![sYH5nO.png](https://s3.ax1x.com/2021/01/12/sYH5nO.png)
 
 如果我们为每一个端点都提供一个BFF，每个端点的BFF处理自身的业务逻辑，需要数据时从基础服务内获取，然后在接口返回之前进行组装数据用于实例化返回对象。
 
 这样基础服务如果有新功能添加，BFF几乎不会受到影响，而我们如果后期把App端点进行拆分成Android、IOS时我们只需要将app-bff进行拆分为android-bff、ios-bff，基础服务同样也不会受到影响
 
-[![sYb8v6.png](https://s3.ax1x.com/2021/01/12/sYb8v6.png)](https://imgchr.com/i/sYb8v6)
+![sYb8v6.png](https://s3.ax1x.com/2021/01/12/sYb8v6.png)
 
 这样每当新增一个访问端点时，我们需要修改的地方也只有网关的转发以及添加一个BFF即可，基础服务内提供的服务接口我们完全可以复用，因为基础服务提供的接口都是没有业务针对性的！！！
 
@@ -66,8 +66,8 @@ BFF是（Backends For Frontends）单词的缩写，主要是用于服务前端�
 
 <font size="5px" color="#f00">贴一张用来总结的大图：</font>
 
-[![sYOCUe.png](https://s3.ax1x.com/2021/01/12/sYOCUe.png)](https://imgchr.com/i/sYOCUe)
+![sYOCUe.png](https://s3.ax1x.com/2021/01/12/sYOCUe.png)
 
-[![sYqKL8.png](https://s3.ax1x.com/2021/01/12/sYqKL8.png)](https://imgchr.com/i/sYqKL8)
+![sYqKL8.png](https://s3.ax1x.com/2021/01/12/sYqKL8.png)
 
 从这个技术体系图中看到，作为应用服务层的API服务就是BFF，他们会从基础业务服务如客户服务、订单服务、产品服务等微服务中获取数据，进行一定的聚合和裁剪返回某个具体业务线的前端应用，前端应用可能是SPA也可能是H5应用。BFF层的API服务，我们在实践中大部分都使用了ASP.NET Core进行开发，同时也在尝试使用Go进行开发，也让前端有兴趣的同事引入进来用Go进行BFF的开发。但是，在基础服务层面即前面所说的业务中台层，还是由后端同事使用ASP.NET Core开发，确保质量。

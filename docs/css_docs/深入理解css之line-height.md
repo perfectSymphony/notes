@@ -7,7 +7,7 @@
 
 字母x在css里面扮演着一个很重要的角色，因为字母x的下边缘就是基线所在的位置。而x-height指的就是字母x的高度，ex是一个尺寸单位，其大小是相对字母x的来计算的，即1ex就表示1个字母x的高度。如下图所示：
 
-[![rbXOpT.png](https://s3.ax1x.com/2020/12/29/rbXOpT.png)](https://imgchr.com/i/rbXOpT)
+![rbXOpT.png](https://s3.ax1x.com/2020/12/29/rbXOpT.png)
 
 我们在平时的开发中很少用到ex，因为ex是个相对单位。对于相对的东西，我们总是感觉很难控制，但这并不表明ex就一点用处都没有。我们可以利用ex就是一个x-height的特性来实现图标与文字的垂直居中，这样如论字体大小如何变化，都不会影响垂直居中的效果。代码如下：
 
@@ -29,7 +29,7 @@
 ```
 
 效果如下：
-[![rbjOUI.png](https://s3.ax1x.com/2020/12/29/rbjOUI.png)](https://imgchr.com/i/rbjOUI)
+![rbjOUI.png](https://s3.ax1x.com/2020/12/29/rbjOUI.png)
 
 #### line-height的属性值
 - normal
@@ -53,7 +53,7 @@ normal为line-height的默认值，但并不是一个固定的值，而是会受
 #### 行距与半行距
 很多开发人员开还原设计图的时候，往往没有考虑到行距的影响，因此开发出来的页面很多时候都与设计图不符合，总会差那么几个像素。那么什么是行距呢，我们可以想象一下在文字排版的时候，如果行与行之间的间距为0，则文字是会紧紧贴在一起的，因此，行距就是用来协助排版的。行距的计算为：line-height - em-box，em-box指的是1em的大小，因此行距可以表示为：line-height - font-size，假设line-height为1.5，font-size为20，则行距为：
 1.5*20 - 20 = 10，则最终行距为10，而这个行距会平均作用于文字的上边和下边。但em-box我们是无法感知这个盒子在哪的，而内容区域我们则可以理解为我们选中文字后的背景色所在区域，而当字体是宋体的时候，内容区域和em-box是等高的，因此我们可以利用此揪出ex-box的藏身之处。如下图所示：
-[![rbvhZj.png](https://s3.ax1x.com/2020/12/29/rbvhZj.png)](https://imgchr.com/i/rbvhZj)
+![rbvhZj.png](https://s3.ax1x.com/2020/12/29/rbvhZj.png)
 
 正是因为行距的存在，我们给元素设置margin值时，要减去相应的半行距值，这样才能比较精确地还原设计图。
 
@@ -84,7 +84,7 @@ normal为line-height的默认值，但并不是一个固定的值，而是会受
 ```
 效果如下：
 
-[![rbxkOe.png](https://s3.ax1x.com/2020/12/29/rbxkOe.png)](https://imgchr.com/i/rbxkOe)
+![rbxkOe.png](https://s3.ax1x.com/2020/12/29/rbxkOe.png)
 
 前面的文章有说过，每一个行框盒子前面都有一个看不见的，规范称之为“strut”的东西。我们给.box设置了line-height为400px，则这个“strut”的line-height也会继承为400px。然后我们给.text设置inline-block，这样我们就可以重置.box设置的line-height，又因为ineline-block保持了内联特性，因此我们可以设置vertical-align以及产生“strut”，从而实现近似垂直居中对齐。
 

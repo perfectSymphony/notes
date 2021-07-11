@@ -8,7 +8,7 @@
 
 ### 方案二： 原型prototype + toString +  call()
 
-[![DYq1xS.png](https://s3.ax1x.com/2020/11/24/DYq1xS.png)](https://imgchr.com/i/DYq1xS)
+![DYq1xS.png](https://s3.ax1x.com/2020/11/24/DYq1xS.png)
 
 ```sh
 首先: Object.prototype.toString.call(variable)来判断，返回值是字符串

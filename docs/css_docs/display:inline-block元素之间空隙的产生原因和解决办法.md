@@ -2,7 +2,7 @@
 
 在CSS布局中，如果我们想要将一些元素在同一行显示，其中的一种方法就是把要同行显示的元素设置display属性为inline-block。但是你会发现这些同行显示的inline-block元素之间会出现一定的空隙。
 
-[![RWbPaT.png](https://z3.ax1x.com/2021/07/04/RWbPaT.png)](https://imgtu.com/i/RWbPaT)
+![RWbPaT.png](https://z3.ax1x.com/2021/07/04/RWbPaT.png)
 
 代码： 
 
@@ -135,5 +135,4 @@
 
 最后来张解决问题的效果图:
 
-
-[![RWOQoV.png](https://z3.ax1x.com/2021/07/04/RWOQoV.png)](https://imgtu.com/i/RWOQoV)
+![RWOQoV.png](https://z3.ax1x.com/2021/07/04/RWOQoV.png)

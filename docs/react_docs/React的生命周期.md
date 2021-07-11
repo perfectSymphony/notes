@@ -103,7 +103,7 @@ render函数会插入jsx生成的dom结构，react会生成一份虚拟dom树，
 
 #### 3. React新增的生命周期(个人补充)
 
-[![cGIMxe.png](https://z3.ax1x.com/2021/04/07/cGIMxe.png)](https://imgtu.com/i/cGIMxe)
+![cGIMxe.png](https://z3.ax1x.com/2021/04/07/cGIMxe.png)
 
 
 #### 3.1. getDerivedStateFromProps(nextProps, prevState)

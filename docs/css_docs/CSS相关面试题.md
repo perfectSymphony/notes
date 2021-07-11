@@ -128,7 +128,7 @@ border-sizing: border-box;
 
 从第一层到第五层依次为：border、content+padding、background-image、background-color、margin。
 
-[![D14WjK.png](https://s3.ax1x.com/2020/11/21/D14WjK.png)](https://imgchr.com/i/D14WjK)
+![D14WjK.png](https://s3.ax1x.com/2020/11/21/D14WjK.png)
 
 ### 例如一个盒子的 margin 为 20px，border 为 1px，padding 为 10px,content 的宽为 200px、高为50px
 

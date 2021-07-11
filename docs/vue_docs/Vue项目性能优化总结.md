@@ -324,7 +324,7 @@ new webpack.optimize.CommonsChunkPlugin({
 
 SourceMap 的可选值如下（+ 号越多，代表速度越快，- 号越多，代表速度越慢, o 代表中等速度 ）
 
-[![6IZmN9.png](https://z3.ax1x.com/2021/03/22/6IZmN9.png)](https://imgtu.com/i/6IZmN9)
+![6IZmN9.png](https://z3.ax1x.com/2021/03/22/6IZmN9.png)
 
 开发环境推荐：cheap-module-eval-source-map
 
@@ -355,7 +355,7 @@ if (config.build.bundleAnalyzerReport) {
 
 执行 `$ npm run build \--report` 后生成分析报告如下：
 
-[![6IZ8BD.gif](https://z3.ax1x.com/2021/03/22/6IZ8BD.gif)](https://imgtu.com/i/6IZ8BD)
+![6IZ8BD.gif](https://z3.ax1x.com/2021/03/22/6IZ8BD.gif)
 
 ### 2.8、Vue 项目的编译优化
 如果你的 Vue 项目使用 Webpack 编译，需要你喝一杯咖啡的时间，那么也许你需要对项目的 Webpack 配置进行优化，提高 Webpack 的构建效率。具体如何进行 Vue 项目的 Webpack 构建优化，可以参考作者的另一篇文章《 Vue 项目 Webpack 优化实践》
@@ -380,7 +380,7 @@ app.use(compression())
 ```
 重启服务，观察网络面板里面的 `response header`，如果看到如下红圈里的字段则表明 gzip 开启成功 ：
 
-[![6IZwgP.png](https://z3.ax1x.com/2021/03/22/6IZwgP.png)](https://imgtu.com/i/6IZwgP)
+![6IZwgP.png](https://z3.ax1x.com/2021/03/22/6IZwgP.png)
 
 ### 3.2、浏览器缓存
 为了提高用户加载页面的速度，对静态资源进行缓存是非常必要的，根据是否需要重新向服务器发起请求来分类，将 HTTP 缓存规则分为两大类（强制缓存，对比缓存），如果对缓存机制还不是了解很清楚的，可以参考作者写的关于 HTTP 缓存的文章《深入理解HTTP缓存机制及原理》，这里不再赘述。
@@ -396,4 +396,4 @@ Chrome 的 Performance 面板可以录制一段时间内的 js 执行细节及�
 点击 Record 开始录制
 刷新页面或展开某个节点
 点击 Stop 停止录制
-[![6IZsHg.png](https://z3.ax1x.com/2021/03/22/6IZsHg.png)](https://imgtu.com/i/6IZsHg)
+![6IZsHg.png](https://z3.ax1x.com/2021/03/22/6IZsHg.png)

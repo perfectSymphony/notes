@@ -14,7 +14,7 @@
 所有的异步任务结果都是通过任务队列来调度的。而任务分为两类：宏任务(macro task)和微任务(micro task)。它们之间的执行规则就是每个宏任务结束后都要将所有微任务清空。常见的宏任务有setTimeout/MessageChannel/postMessage/setImmediate，微任务有MutationObsever/Promise.then。
 
 想要透彻学习事件循环，推荐Jake在JavaScript全球开发者大会的演讲，
-[![yVGwQ0.png](https://s3.ax1x.com/2021/02/01/yVGwQ0.png)](https://imgchr.com/i/yVGwQ0)
+![yVGwQ0.png](https://s3.ax1x.com/2021/02/01/yVGwQ0.png)
 
 ## nextTick原理
 

@@ -34,7 +34,7 @@ baseline，baseline为vertical-align的默认值，其意思是指基线对齐�
 
 效果如下： 
 
-[![rHxDKg.png](https://s3.ax1x.com/2020/12/29/rHxDKg.png)](https://imgchr.com/i/rHxDKg)
+![rHxDKg.png](https://s3.ax1x.com/2020/12/29/rHxDKg.png)
 
 由于baseline是默认值，所以可以不用写。.box的line-height为100px，这其实是给“strut”设置的（不懂strut概念的可以看看[深入理解css盒子模型]()，简单点说就是每一个行框盒子都有一个看不见的节点，该节点继承了line-height），因此.text对齐于该节点的基线（可以想象成这个看不见的节点有一个字母x，而.text就是跟这个字母x的下边缘对齐）
 
@@ -58,7 +58,7 @@ baseline，baseline为vertical-align的默认值，其意思是指基线对齐�
 
 效果如下：
 
-[![rHz1J0.png](https://s3.ax1x.com/2020/12/29/rHz1J0.png)](https://imgchr.com/i/rHz1J0)
+![rHz1J0.png](https://s3.ax1x.com/2020/12/29/rHz1J0.png)
 
 top，对于内联元素，指的是元素的顶部和当前行框盒子的顶部对齐；对于table-cell元素，指的是元素的顶padding边缘和表格行的顶部对齐。例子如下：
 
@@ -82,7 +82,7 @@ top，对于内联元素，指的是元素的顶部和当前行框盒子的顶�
 
 效果如下：
 
-[![rbSl0H.png](https://s3.ax1x.com/2020/12/29/rbSl0H.png)](https://imgchr.com/i/rbSl0H)
+![rbSl0H.png](https://s3.ax1x.com/2020/12/29/rbSl0H.png)
 
 bottom，跟top类似，将顶部换成底部即可。
 
@@ -131,7 +131,7 @@ text-bottom，指的是盒子的底部和父级内容区域的底部对齐。
 
 效果如下：
 
-[![rbCF0g.png](https://s3.ax1x.com/2020/12/29/rbCF0g.png)](https://imgchr.com/i/rbCF0g)
+![rbCF0g.png](https://s3.ax1x.com/2020/12/29/rbCF0g.png)
 
 
 所谓内容区域，可以看成是鼠标选中文字后高亮的背景色区域，上面的例子中，由于父元素设置的是20px，所以图片的vertical-align设置text-top的时候，就可以看成是跟子元素为20px元素的内容区域顶部对齐。
@@ -162,7 +162,7 @@ vertical-align是支持数值的，并且兼容性也非常好，但大部分开
 ```
 
 效果如下：
-[![rbPEDO.png](https://s3.ax1x.com/2020/12/29/rbPEDO.png)](https://imgchr.com/i/rbPEDO)
+![rbPEDO.png](https://s3.ax1x.com/2020/12/29/rbPEDO.png)
 
 ## vertical-align起作用的前提
 
@@ -219,7 +219,7 @@ vertical-align起作用是有前提条件的，这个前提条件就是：只能
     <span>文本</span>
 </div>
 ```
-[![rbkp5Q.png](https://s3.ax1x.com/2020/12/29/rbkp5Q.png)](https://imgchr.com/i/rbkp5Q)
+![rbkp5Q.png](https://s3.ax1x.com/2020/12/29/rbkp5Q.png)
 
 从代码上看，好像.box的高度会是32px，但实质上.box的高度会比32px还要高。原因是"strut"继承了line-height: 32px，span也继承了line-height: 32px，但两者的font-size不一样，这就导致了"strut"的font-size比较小，而span的font-size比较大，也就是说它们的基线不在同一位置上，"strut"偏上一点，而span默认又是基线对齐，为此，span总体会往上移以便跟"strut"基线对齐，.box元素就是这样被撑高了。而解决方案可以有以下几种：
 

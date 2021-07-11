@@ -8,7 +8,7 @@
 
 官方的说法是：**进程是 CPU 资源分配的最小单位；线程是 CPU 调度的最小单位。**这两句话并不好理解，我们先来看张图：
 
-[![6RUIXR.png](https://s3.ax1x.com/2021/03/19/6RUIXR.png)](https://imgtu.com/i/6RUIXR)
+![6RUIXR.png](https://s3.ax1x.com/2021/03/19/6RUIXR.png)
 
  - 进程好比图中的工厂，有单独的专属自己的工厂资源。
  - 线程好比图中的工人，多个工人在一个工厂中协作工作，工厂与工人是 1:n 的关系。也就是说一个进程由一个或多个线程组成，线程是一个进程中代码的不同执行路线；
@@ -61,7 +61,7 @@
 #### 2. Event Loop 过程解析
 一个完整的 Event Loop 过程，可以概括为以下阶段：
 
-[![6Rak4S.png](https://s3.ax1x.com/2021/03/19/6Rak4S.png)](https://imgtu.com/i/6Rak4S)
+![6Rak4S.png](https://s3.ax1x.com/2021/03/19/6Rak4S.png)
 
 
  - 一开始执行栈空,**我们可以把执行栈认为是一个存储函数调用的栈结构，遵循先进后出的原则**。micro 队列空，macro 队列里有且只有一个 script 脚本（整体代码）。
@@ -78,7 +78,7 @@
 
 我们总结一下，每一次循环都是一个这样的过程：
 
-[![6RaRbt.png](https://s3.ax1x.com/2021/03/19/6RaRbt.png)](https://imgtu.com/i/6RaRbt)
+![6RaRbt.png](https://s3.ax1x.com/2021/03/19/6RaRbt.png)
 
 当某个宏任务执行完后,会查看是否有微任务队列。如果有，先执行微任务队列中的所有任务，如果没有，会读取宏任务队列中排在最前的任务，执行宏任务的过程中，遇到微任务，依次加入微任务队列。栈空后，再次读取微任务队列里的任务，依次类推。
 
@@ -111,7 +111,7 @@ setTimeout(()=>{
 ##### 1. Node 简介
 Node 中的 Event Loop 和浏览器中的是完全不相同的东西。Node.js 采用 V8 作为 js 的解析引擎，而 I/O 处理方面使用了自己设计的 libuv，libuv 是一个基于事件驱动的跨平台抽象层，封装了不同操作系统一些底层特性，对外提供统一的 API，事件循环机制也是它里面的实现（下文会详细介绍）。
 
-[![6RWA6x.png](https://s3.ax1x.com/2021/03/19/6RWA6x.png)](https://imgtu.com/i/6RWA6x)
+![6RWA6x.png](https://s3.ax1x.com/2021/03/19/6RWA6x.png)
 
 Node.js 的运行机制如下:
 
@@ -125,7 +125,7 @@ Node.js 的运行机制如下:
 
  其中 libuv 引擎中的事件循环分为 6 个阶段，它们会按照顺序反复运行。每当进入某一个阶段的时候，都会从对应的回调队列中取出函数去执行。当队列为空或者执行的回调函数数量到达系统设定的阈值，就会进入下一阶段。
 
- [![6RW11I.png](https://s3.ax1x.com/2021/03/19/6RW11I.png)](https://imgtu.com/i/6RW11I)
+![6RW11I.png](https://s3.ax1x.com/2021/03/19/6RW11I.png)
 
  从上图中，大致看出 node 中的事件循环的顺序：
 

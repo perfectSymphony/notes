@@ -320,12 +320,7 @@ function isArray(){
 
 ### 十、promise
 [Promise精选](./Promise精选.md)
-
-### 十一、事件循环
-
-[事件循环机制相关问题总结](/js_docs/事件循环机制相关问题总结.md)
-
-### 十二、对数组进行扁平化、排序、去重
+### 十一、对数组进行扁平化、排序、去重
 
 ```javascript
 const source = [ [3, 9, 2,4], [99, 32, 5, 7,3], [6, 3,12,45,9, [11, 8, [22,15, 313, [44] ] ] ], 10, [99,32]];
@@ -372,7 +367,7 @@ for(let i = 0; i < newArray.length; i++){
 console.log(hash)
 ```
 
-### 十三、将数组乱序输出
+### 十二、将数组乱序输出
 
 ```javascript
 //将数组乱序输出
@@ -405,7 +400,7 @@ function test(arr, n){
 test(array, 6)
 ```
 
-### 十四、url地址数据参数转化JSON对象
+### 十三、url地址数据参数转化JSON对象
 
 ```javascript
 // 方法一：

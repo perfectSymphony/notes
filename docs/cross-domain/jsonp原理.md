@@ -20,7 +20,7 @@
 
 通常一般我们利用ajax请求某些接口返回的数据，基本都是json格式，而jsonp请求返回的数据，是什么呢，咱们来看一条完整的jsop请求和其返回的数据：
 
-[![r6ZT39.png](https://s3.ax1x.com/2020/12/23/r6ZT39.png)](https://imgchr.com/i/r6ZT39)
+![r6ZT39.png](https://s3.ax1x.com/2020/12/23/r6ZT39.png)
 
 前端工程师通过callback向后端传递了一个abc字符串，后端呢将数据包裹在 abc（）中返回，
 
@@ -30,7 +30,7 @@
 这就是 jsonp 的基本原理，利用script标签的特性，将数据使用json格式用一个函数包裹起来，然后在进行访问的页面中定义一个相同函数名的函数，因为 script 标签src引用的js脚本到达浏览器时会执行，而我们已经定义了一个同名的函数，所以json格式的数据，就作为参数传递给了我们定义的同名函数了。这样就完成了跨域数据交换。jsonp的含义是：json with padding，而在json数据外包裹它的那个函数。
 附上封装的jsop的代码：
 
-[![r6eEE8.jpg](https://s3.ax1x.com/2020/12/23/r6eEE8.jpg)](https://imgchr.com/i/r6eEE8)
+![r6eEE8.jpg](https://s3.ax1x.com/2020/12/23/r6eEE8.jpg)
 
 以上便是利用jquery的风格封装得到jsonp函数，
 
@@ -40,7 +40,7 @@
 
 百度的jsonp用的是
 
-[![r6eavR.png](https://s3.ax1x.com/2020/12/23/r6eavR.png)](https://imgchr.com/i/r6eavR)
+![r6eavR.png](https://s3.ax1x.com/2020/12/23/r6eavR.png)
 
 百度用的是cb传递的；
 

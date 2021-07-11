@@ -25,7 +25,7 @@ C   ——   Communication 传播 / 交流 / 通信
 
 首先我们了解一下各平台和TRTC服务之间的交互：
 
-[![6iBD9x.png](https://s3.ax1x.com/2021/03/01/6iBD9x.png)](https://imgtu.com/i/6iBD9x)
+![6iBD9x.png](https://s3.ax1x.com/2021/03/01/6iBD9x.png)
 
 
 以小程序和web也就是浏览器之间的的视频通讯为例
@@ -51,7 +51,7 @@ C   ——   Communication 传播 / 交流 / 通信
 
 首先，我们来看一下这张图：
 
-[![6iBj5n.png](https://s3.ax1x.com/2021/03/01/6iBj5n.png)](https://imgtu.com/i/6iBj5n)
+![6iBj5n.png](https://s3.ax1x.com/2021/03/01/6iBj5n.png)
 
 那么很显然，从生命周期的角度上来讲，我们从加入房间，到退出房间可以为本地音视频通话的一个生命周期，接下来，按照生命周期步骤，一步步来说。
 

@@ -55,7 +55,7 @@ obj2.language[1] = ["二","三"];
 console.log('obj1',obj1)
 console.log('obj2',obj2)
 ```
-[![DvCoJx.png](https://s3.ax1x.com/2020/12/07/DvCoJx.png)](https://imgchr.com/i/DvCoJx)
+![DvCoJx.png](https://s3.ax1x.com/2020/12/07/DvCoJx.png)
 
 浅拷贝是按位拷贝对象，它会创建一个新对象，对原有对象的成员进行依次拷贝。如果属性是基本类型，拷贝的就是基本类型的值；如果属性是引用类型，拷贝的就是内存地址。因此如果新对象中的某个对象成员改变了地址，就会影响到原有的对象。
 
@@ -78,7 +78,7 @@ obj2.language[1] = ["二","三"];
 console.log('obj1',obj1)
 console.log('obj2',obj2)
 ```
-[![DvCTW6.png](https://s3.ax1x.com/2020/12/07/DvCTW6.png)](https://imgchr.com/i/DvCTW6)
+![DvCTW6.png](https://s3.ax1x.com/2020/12/07/DvCTW6.png)
 
 #### 2.2、浅拷贝的实现
 
@@ -98,7 +98,7 @@ console.log('obj1',obj1)
 console.log('obj2',obj2)
 ```
 
-[![DvCjwd.png](https://s3.ax1x.com/2020/12/07/DvCjwd.png)](https://imgchr.com/i/DvCjwd)
+![DvCjwd.png](https://s3.ax1x.com/2020/12/07/DvCjwd.png)
 
 （2）Array.prototype.concat()和Array.prototype.slice()
 
@@ -124,7 +124,7 @@ arr2[2].user = 'AAA';
 console.log('arr1',arr1)
 console.log('arr2',arr2)
 ```
-[![DvCzFI.png](https://s3.ax1x.com/2020/12/07/DvCzFI.png)](https://imgchr.com/i/DvCzFI)
+![DvCzFI.png](https://s3.ax1x.com/2020/12/07/DvCzFI.png)
 补充说明：Array的slice和contact方法都不会修改原数组，而是会返回一个对原数组进行浅拷贝的新数组。这两种方法同Object.assign()一样，都是对第一层属性依次拷贝，如果第一层的属性是基本数据类型，就拷贝值；如果是引用数据类型，就拷贝内存地址。
 
 ### 三、JS深拷贝
@@ -147,7 +147,7 @@ obj2.language[1] = ["二","三"];
 console.log('obj1',obj1)
 console.log('obj2',obj2)
 ```
-[![DvPlXF.png](https://s3.ax1x.com/2020/12/07/DvPlXF.png)](https://imgchr.com/i/DvPlXF)
+![DvPlXF.png](https://s3.ax1x.com/2020/12/07/DvPlXF.png)
 
 缺点：这种方法可以实现数组和对象和基本数据类型的深拷贝，但不能处理函数。因为JSON.stringify()方法是将一个javascript值转换我一个JSON字符串，不能接受函数。其他影响如下：
 

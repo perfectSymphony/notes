@@ -42,15 +42,15 @@ module.exports = {
 其实正确地去理解这个报错的话，就一定要去整明白 require 和 import 的区别！
 
 
-> node编程中最重要的思想就是模块化，import和require都是被模块化所使用。
-1、遵循规范
-`require` / `exports` 是`CommonJS`的一部分
-`import` / `export` 是ES6的新规范，如果要兼容浏览器的话必须转化成es5的语法
-2、调用时间
-`require` 是运行时调用，所以`require`理论上可以运用在代码的任何地方
-import 是编译时调用，所以必须放在文件开头
-3、本质
-`require` 是赋值过程，其实`require`的结果就是对象、数字、字符串、函数等，再把`require`的结果赋值给某个变量
+> node编程中最重要的思想就是模块化，import和require都是被模块化所使用。<br/>
+1、遵循规范<br/>
+`require` / `exports` 是`CommonJS`的一部分<br/>
+`import` / `export` 是ES6的新规范，如果要兼容浏览器的话必须转化成es5的语法<br/>
+2、调用时间<br/>
+`require` 是运行时调用，所以`require`理论上可以运用在代码的任何地方<br/>
+import 是编译时调用，所以必须放在文件开头<br/>
+3、本质<br/>
+`require` 是赋值过程，其实`require`的结果就是对象、数字、字符串、函数等，再把`require`的结果赋值给某个变量<br/>
 `import` 是解构过程，但是目前所有的引擎都还没有实现import，我们在node中使用babel支持ES6，也仅仅是将ES6转码为ES5再执行，`import`语法会被转码为`require`
 
 

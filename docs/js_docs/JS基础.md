@@ -423,3 +423,54 @@ test(array, 6)
 // 方法三：
 // node.js方法之url的解构方法
 ```
+
+###十四、解惑 ["1", "2", "3"].map(parseInt) 为何返回[1,NaN,NaN]
+
+要点：涉及到是否深入理解两个函数的格式与参数含义。
+由于parseInt(string, radix) 的参数radix必须介于2~36之间，而且字符串string中的数字不能大于radix才能正确返回数字结果值。
+javascript代码测试一下：
+```javascript
+var a=["1", "2", "3", "4","5",6,7,8,9,10,11,12,13,14,15];
+a.map(parseInt);
+// 返回结果为：[1,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,9,11,13,15,17,19]
+```
+正好印证了以上的猜测是正确的，因为：
+```javascript
+parseInt('1',0) = 1,
+parseInt('2',1) = NaN,
+parseInt('3',2) = NaN,
+```
+正是由于map的回调函数的参数index索引值作了parseInt的基数radix，导致出现超范围的radix赋值和不合法的进制解析，才会返回NaN。
+
+这时你可以重新定义parseInt函数，再来测试一下：
+```javascript
+function parseInt(str, radix) { 
+    return str+'-'+radix; 
+};
+var a=["1", "2", "3", "4","5",6,7,8,9,10,11,12,13,14,15];
+a.map(parseInt);
+// 输出结果为： ["1-0","2-1","3-2","4-3","5-4","6-5","7-6","8-7","9-8","10-9","11-10","12-11","13-12","14-13","15-14"]。
+```
+通过此例，再次证明，索引index的起始值从0开始，与radix的对应如前陈述一致，所以才会出现返回NaN的类型值。
+这个实例提醒我们在使用两个函数parseInt和map时候要格外小心。同时对于IE6-7不支持map函数的情况也要谨慎或者通过prototype扩展处理。
+
+#### 十四(1)、parseInt() 函数
+ - 定义和用法
+  parseInt() 函数可解析一个字符串，并返回一个整数。
+ - 语法
+   parseInt(string, radix)
+   
+   | 参数 | 描述 |
+| --------- | --------- |
+
+| string| 必需。要被解析的字符串。
+
+| radix|  可选。表示要解析的数字的基数。该值介于 2 ~ 36 之间。如果省略该参数或其值为 0，则数字将以 10 为基础来解析。如果它以 “0x” 或 “0X” 开头，将以 16 为基数。如果该参数小于 2 或者大于 36，则 parseInt() 将返回 NaN。
+   
+ - 返回值
+   返回解析后的数字。
+ - 说明
+
+当参数 radix 的值为 0，或没有设置该参数时，parseInt() 会根据 string 来判断数字的基数。
+
+举例，如果 string 以 "0x" 开头，parseInt() 会把 string 的其余部分解析为十六进制的整数。如果string 以 0 开头，那么 ECMAScript v3 允许 parseInt() 的一个实现把其后的字符解析为八进制或十六进制的数字。如果string 以 1 ~ 9 的数字开头，parseInt() 将把它解析为十进制的整数。

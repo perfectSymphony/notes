@@ -442,3 +442,82 @@ backface-visibility: hidden;
 -ms-perspective: 1000;
 perspective: 1000;
 ```
+
+### 七、css实现瀑布流
+
+```javascript
+<div class="box">
+    <div class="item">
+        <img  src="banner.jpg" alt="" />
+    </div>
+    <div class="item">
+        <img  src="show.jpg" alt="" />
+    </div>
+    <div class="item">
+        <img  src="cloth.jpg" alt="" />
+    </div>
+    <div class="item">
+        <img  src="banner.jpg" alt="" />
+    </div>
+    <div class="item">
+        <img  src="show.jpg" alt="" />
+    </div>
+    <div class="item">
+        <img  src="cloth.jpg" alt="" />
+    </div>
+    <div class="item">
+        <img  src="banner.jpg" alt="" />
+    </div>
+    <div class="item">
+        <img  src="show.jpg" alt="" />
+    </div>
+    <div class="item">
+        <img  src="cloth.jpg" alt="" />
+    </div>
+    <div class="item">
+        <img  src="show.jpg" alt="" />
+    </div>
+    <div class="item">
+        <img  src="cloth.jpg" alt="" />
+    </div>
+    <div class="item">
+        <img  src="banner.jpg" alt="" />
+    </div>
+</div>
+```
+- 方法一：flex 弹性布局实现瀑布流
+```javascript
+.box {
+      display: flex;  
+      flex-flow:column wrap;
+      height: 100vh;
+    }
+    .item {
+        margin: 10px;
+        width: calc(100%/3 - 20px);     //这里要展示几列就除于几
+    }
+    .item img{
+        width: 100%;
+        height:100%;
+    }
+```
+- 方法二： 使用CSS3的多列（Multi-column）属性
+- 具体步骤：
+
+  - 设置外部容器多列列数（column-count）和列间距（column-gap）
+  - 设置内容条目的break-inside属性为avoid，使条目总体不被打断。
+
+```javascript
+.box {
+        margin: 10px;
+        column-count: 3;
+        column-gap: 10px;
+    }
+    .item {
+        margin-bottom: 10px;
+    }
+    .item img{
+        width: 100%;
+        height:100%;
+    }
+```

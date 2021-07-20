@@ -696,19 +696,28 @@ vue中的数据绑定有三种方式：
 ```sh
 <input v-model="something">
 ```
-**nextTick的实现原理是什么？**
 
-[Vue的异步更新实现原理](Vue的异步更新实现原理.md)
+**[Vue的异步更新实现原理](Vue的异步更新实现原理.md)**
 
 **Vue不能检测数组的哪些变动？Vue 怎么用 vm.$set() 解决对象新增属性不能响应的问题 ？**
 
 - Vue 不能检测以下数组的变动：
  - 当你利用索引直接设置一个数组项时，例如：`vm.items[indexOfItem] = newValue`
  - 当你修改数组的长度时，例如：`vm.items.length = newLength`
-- 解决办法：
- - vm.$set 的实现原理是：
+- 解决办法：(vm.$set)
+ - vm.$set解决的问题：
+ - 给对象加了一个属性，在控制台能打印出来，但是却没有更新到视图上时，也许这个时候就需要用到this.$set()这个方法了，简单来说this.$set的功能就是解决这个问题的啦。官方解释：向响应式对象中添加一个属性，并确保这个新属性同样是响应式的，且触发视图更新。它必须用于向响应式对象上添加新属性，因为 Vue 无法探测普通的新增属性 (比如this.tableData[index].edit = true)，所以用this.$set（）的写法就是this.$set( this.tableData, this.tableData[index].edit, true )。
+ - vm.$set 实现原理：
  - 如果目标是数组，直接使用数组的 splice 方法触发相应式；
  - 如果目标是对象，会先判读属性是否存在、对象是否是响应式，最终如果要对属性进行响应式处理，则是通过调用 defineReactive 方法进行响应式处理（ defineReactive 方法就是 Vue 在初始化对象时，给对象属性采用 Object.defineProperty 动态添加 getter 和 setter 的功能所调用的方法）
+
+```javascript
+//调用方法
+this.$set( target, key, value )
+// target：要更改的数据源(可以是对象或者数组)
+// key：要更改的具体数据
+// value ：重新赋的值
+```
 
  **虚拟Dom以及key属性的作用**
 

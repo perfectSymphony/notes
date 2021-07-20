@@ -50,6 +50,7 @@ arr.reduce((preValue, currentValue)=>{
 7、for of方法不仅可以遍历数组和对象，还可以遍历自定义的数据结构
 
 ```sh
+// for of遍历的只是数组内的元素，而不包括数组的原型属性method和索引name
   let arr = [1,2,3,4,5]
   for(let item of arr){
     console.log(item)
@@ -58,6 +59,7 @@ arr.reduce((preValue, currentValue)=>{
 
 8、for...in既可以遍历对象也可以遍历数组
 ```sh
+// for in遍历的是数组的索引（即键名），而for of遍历的是数组元素值。
 var arr = ['a', 'b', 'c', 'd'];
 for(var i in arr) {
   console.log('index:', i, 'value:', arr[i])

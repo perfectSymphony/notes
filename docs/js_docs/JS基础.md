@@ -275,13 +275,6 @@ Ajax缺点：
 把对应的字符串解析成可执行的JS代码并运行；
 应该避免使用eval()，不安全且非常耗性能。
 
-6、Null和Undefined的区别：
-undefined表示声明的变量未赋值，而null表示声明变量的值为空值；
-两者相比较时要使用===，因为==无法区分。
-
-7、["1", "2", "3"].map(parseInt) 答案是多少？
-[1,NaN.NaN]。因为parseInt的参数时(val,radix)，radix表示基数（多少进制），而map的参数是(function(currentValue,index,arr),thisIndex)。所以map传了三个参数给parseInt，radix对应index不合法导致解析失败。
-[详细参考的使用技巧案例](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 8、JSON与字符串的转换：
 - 字符串转换为JSON
 
@@ -461,11 +454,9 @@ a.map(parseInt);
    parseInt(string, radix)
    
    | 参数 | 描述 |
-| --------- | --------- |
-
-| string| 必需。要被解析的字符串。
-
-| radix|  可选。表示要解析的数字的基数。该值介于 2 ~ 36 之间。如果省略该参数或其值为 0，则数字将以 10 为基础来解析。如果它以 “0x” 或 “0X” 开头，将以 16 为基数。如果该参数小于 2 或者大于 36，则 parseInt() 将返回 NaN。
+   | --------- | --------- |
+   | string |  必需。要被解析的字符串。|
+   | radix  |  可选。表示要解析的数字的基数。该值介于 2 ~ 36 之间。如果省略该参数或其值为 0，则数字将以 10 为基础来解析。如果它以 “0x” 或 “0X” 开头，将以 16 为基数。如果该参数小于 2 或者大于 36，则 parseInt() 将返回 NaN。|
    
  - 返回值
    返回解析后的数字。

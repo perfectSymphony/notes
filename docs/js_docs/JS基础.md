@@ -417,7 +417,7 @@ test(array, 6)
 // node.js方法之url的解构方法
 ```
 
-###十四、解惑 ["1", "2", "3"].map(parseInt) 为何返回[1,NaN,NaN]
+### 十四、解惑 ["1", "2", "3"].map(parseInt) 为何返回[1,NaN,NaN]
 
 要点：涉及到是否深入理解两个函数的格式与参数含义。
 由于parseInt(string, radix) 的参数radix必须介于2~36之间，而且字符串string中的数字不能大于radix才能正确返回数字结果值。

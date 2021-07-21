@@ -275,7 +275,7 @@ Ajax缺点：
 把对应的字符串解析成可执行的JS代码并运行；
 应该避免使用eval()，不安全且非常耗性能。
 
-8、JSON与字符串的转换：
+6、JSON与字符串的转换：
 - 字符串转换为JSON
 
 ```javascript
@@ -291,11 +291,11 @@ var str = obj.toJSONString();
 var str = JSON.stringify(obj);
 ```
 
-9、attribute和property的区别：
+7、attribute和property的区别：
 attribute是DOM元素在文档中作为html标签拥有的属性；
 property是DOM元素在JS中作为对象所拥有的属性；
 
-10、如何判断一个对象是否为数组：
+8、如何判断一个对象是否为数组：
 
 ```javascript
 // 在JS中，可以通过Object.prototype.toString方法，判断某个对象之属于哪种内置类型。
@@ -307,9 +307,16 @@ function isArray(){
 }
 ```
 
-10、map、foreach、reduce 间的区别？
+9、map、foreach、reduce 间的区别？
 
 [如何形象地解释 JavaScript 中 map、foreach、reduce 间的区别？](https://www.zhihu.com/question/24927450)
+
+10、defer与async的区别：
+1、`<script src="script.js"></script>`没有`defer`或者`async`浏览器会立即加载并执行指定的脚本，"立即"指的是在渲染`script`标签之下的文档元素之前，也就是说不等待后续载入的文档元素，读到就加载并执行。<br/>
+2、`<script async src="script.js"></script>`加载和渲染后续文档元素的过程将和`script.js`的加载与执行并行进行(异步)。<br/>
+3、`<script defer src="myscript.js"></script>`有`defer`加载后续文档元素的过程将和`script.js`的加载并行进行(异步)，但是`script.js`的执行要在所有元素解析完成之后，`DOMContentLoaded`事件触发之前完成。<br/>
+
+从实用的角度，首先把所有脚本都丢到</body>之前是最佳实践，因为对于旧的浏览器来说这是唯一的优化选择，此法可保证非脚本的其他一切元素能够以最快的速度得到加载和解析。
 
 ### 十、promise
 [Promise精选](./Promise精选.md)
@@ -417,7 +424,7 @@ test(array, 6)
 // node.js方法之url的解构方法
 ```
 
-###十四、解惑 ["1", "2", "3"].map(parseInt) 为何返回[1,NaN,NaN]
+### 十四、解惑 ["1", "2", "3"].map(parseInt) 为何返回[1,NaN,NaN]
 
 要点：涉及到是否深入理解两个函数的格式与参数含义。
 由于parseInt(string, radix) 的参数radix必须介于2~36之间，而且字符串string中的数字不能大于radix才能正确返回数字结果值。

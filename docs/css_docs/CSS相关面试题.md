@@ -515,9 +515,78 @@ perspective: 1000;
     }
     .item {
         margin-bottom: 10px;
+        // 为了控制文本块分解成单独的列，以免项目列表的内容跨列，破坏整体的布局
+        break-inside:avoid;
     }
     .item img{
         width: 100%;
         height:100%;
     }
+```
+- 方法三：grid
+
+```javascript
+<div class="grid">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+</div>
+```
+
+```javascript
+.grid {
+  margin: 50px;
+  padding: 20px;
+  background-color: #e3fafc;
+  border: 1px solid #99e9f2;
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(50px, auto);
+}
+
+.grid > div {
+  border: 1px solid #3bc9db;
+  border-radius: 3px;
+  background-color: #99e9f2;
+  font-size:250%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid > div:nth-child(1) {
+  grid-row: 1 / 4;
+  grid-column: 1;
+}
+
+.grid > div:nth-child(2) {
+  grid-row: 1 / 3;
+  grid-column: 2;
+}
+
+.grid > div:nth-child(3) {
+  grid-row: 1 / 4;
+  grid-column: 3;
+}
+
+.grid > div:nth-child(4) {
+  grid-row: 4 / 7;
+  grid-column: 1;
+}
+
+.grid > div:nth-child(5) {
+  grid-row: 3 / 7;
+  grid-column: 2;
+}
+
+.grid > div:nth-child(6) {
+   grid-row: 4 / 6;
+  grid-column: 3;
+}
 ```

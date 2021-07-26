@@ -687,7 +687,7 @@ vue中的数据绑定有三种方式：
 
 ### v-model
 
-主要是用在表单元素中，它实现了双向绑定。在同事使用v-bind和v-model中，v-model建立的双向绑定对输入型元素input, textarea, select等具有优先权，会强制实行**双向绑定**。很多时候v-model使用在表单的<input>中实现双向绑定。
+主要是用在表单元素中，它实现了双向绑定。v-model建立的双向绑定对输入型元素input, textarea, select等具有优先权，会强制实行**双向绑定**。很多时候v-model使用在表单的`<input>`中实现双向绑定。
 
 ```sh
 <input v-model="something">

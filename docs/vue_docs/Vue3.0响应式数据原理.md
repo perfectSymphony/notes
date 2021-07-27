@@ -389,14 +389,14 @@ let res3 = getData(country).city.name.xxx.yyy.zzz() // undefined
 ### Vue 3.0 的 Proxy & Object.defineProperty
 
 #### Proxy 
-    - **劫持方式:** 代理整个对象，只需做一层代理就可以监听同级结构下的所有属性变化，包括新增属性和删除属性
-    - **本质**： `Proxy`本质上属于元编程非破坏性数据劫持，在原对象的基础上进行了功能的衍生而又不影响原对象，符合松耦合高内聚的设计理念
+  - **劫持方式:** 代理整个对象，只需做一层代理就可以监听同级结构下的所有属性变化，包括新增属性和删除属性
+  - **本质**： `Proxy`本质上属于元编程非破坏性数据劫持，在原对象的基础上进行了功能的衍生而又不影响原对象，符合松耦合高内聚的设计理念
 
 #### Object.defineProperty
 
-    - **劫持方式：**只能劫持对象的属性，不能直接代理对象
-    - **流程：**get中进行依赖收集，set数据时通知订阅者更新
-    - **存在的问题：**虽然 Object.defineProperty 通过为属性设置 getter/setter 能够完成数据的响应式，但是它并不算是实现数据的响应式的完美方案，某些情况下需要对其进行修补或者hack，这也是它的缺陷，主要表现在两个方面：
+  - **劫持方式:** 只能劫持对象的属性，不能直接代理对象
+  - **流程:** get中进行依赖收集，set数据时通知订阅者更新
+  - **存在的问题:** 虽然 Object.defineProperty 通过为属性设置 getter/setter 能够完成数据的响应式，但是它并不算是实现数据的响应式的完美方案，某些情况下需要对其进行修补或者hack，这也是它的缺陷，主要表现在两个方面：
        
        - 无法检测到对象属性的新增或删除
        - 不能监听数组的变化
@@ -584,12 +584,12 @@ console.log(girl.hobbies)  // ['篮球', '足球', '游泳']
 
 ##### 5. Proxy 性能问题
 
-	- `Proxy` 的性能比 `Promise` 还差
-	- `Proxy` 作为新标准，从长远来看，JS 引擎会继续优化 `Proxy`
-	- [Thoughts on ES6 Proxies Performance](https://thecodebarbarian.com/thoughts-on-es6-proxies-performance)
-	- [Proxy 性能之我见](https://www.cnblogs.com/zmj97/p/10954968.html)
+- `Proxy` 的性能比 `Promise` 还差
+- `Proxy` 作为新标准，从长远来看，JS 引擎会继续优化 `Proxy`
+- [Thoughts on ES6 Proxies Performance](https://thecodebarbarian.com/thoughts-on-es6-proxies-performance)
+- [Proxy 性能之我见](https://www.cnblogs.com/zmj97/p/10954968.html)
 
 ##### 6. Proxy 兼容性差
 
-    - `Vue 3.0` 中放弃了对于IE的支持(以为`Vue 3.0`中会对不兼容的浏览器进行向下兼容，但是经过查看资料和源码发现尤大压根没做兼容)
-    - 目前并没有一个完整支持`Proxy`所有拦截方法的`Polyfill`方案，有一个 `google` 编写的`proxy-polyfill`也只支持了`get/set/apply/construct`四种拦截
+  - `Vue 3.0` 中放弃了对于IE的支持(以为`Vue 3.0`中会对不兼容的浏览器进行向下兼容，但是经过查看资料和源码发现尤大压根没做兼容)
+  - 目前并没有一个完整支持`Proxy`所有拦截方法的`Polyfill`方案，有一个 `google` 编写的`proxy-polyfill`也只支持了`get/set/apply/construct`四种拦截

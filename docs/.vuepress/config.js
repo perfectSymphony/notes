@@ -188,6 +188,7 @@ module.exports = {
         sidebarDepth: 3,
         children: [
           '/network/理解cookie、session、token',
+          '/network/CSRF攻击与防御'
         ]
       },       
       {

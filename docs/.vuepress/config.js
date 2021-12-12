@@ -262,6 +262,7 @@ module.exports = {
         children: [
           '/philosophy/语录篇一',
           '/philosophy/语录篇二',
+          '/philosophy/语录篇三',
         ]
       },                                                       
     ], // 侧边栏配置

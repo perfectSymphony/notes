@@ -88,6 +88,7 @@ module.exports = {
           '/js_docs/javascript面试题七问七答',
           '/js_docs/JavaScript提升代码质量的最佳实践列表',
           '/js_docs/null和undefined的区别',
+          '/js_docs/Javascript中的运算符'
          ],
       },
       {
@@ -133,6 +134,8 @@ module.exports = {
         sidebarDepth: 3,
         children: [
           '/react_docs/React的生命周期',
+          '/react_docs/受控组件和非受控组件',
+          '/react_docs/hooks常用API总结及redux在函数组件中的使用'
         ]
       },      
       {
@@ -264,7 +267,15 @@ module.exports = {
           '/philosophy/语录篇二',
           '/philosophy/语录篇三',
         ]
-      },                                                       
+      }, 
+      {
+        title: '功能点预览',   
+        collapsable: true,
+        sidebarDepth: 3,
+        children: [
+          '/preview/one',
+        ]
+      },                                                            
     ], // 侧边栏配置
   }
 };

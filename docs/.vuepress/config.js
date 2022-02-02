@@ -161,6 +161,7 @@ module.exports = {
         children: [
           '/git_docs/详解git pull和git fetch的区别',
           '/git_docs/git stash的用法总结',
+          '/git_docs/Git常见问题总结',
         ]
       }, 
       {
@@ -263,7 +264,8 @@ module.exports = {
         sidebarDepth: 3,
         children: [
           '/problem-record/vue单页应用刷新网页后vuex的state数据丢失的解决方案',
-          '/problem-record/Cannot assign to read only property exports of object'
+          '/problem-record/Cannot assign to read only property exports of object',
+          '/problem-record/Homebrew安装'
         ]
       },
       {

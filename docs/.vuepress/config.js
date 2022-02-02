@@ -92,6 +92,14 @@ module.exports = {
          ],
       },
       {
+        title: '工具篇',   
+        collapsable: true,
+        sidebarDepth: 3,
+        children: [
+          '/tools/工具汇总',
+        ]
+      },      
+      {
         title: 'vue',   
         collapsable: true,
         sidebarDepth: 3,

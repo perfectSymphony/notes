@@ -265,7 +265,8 @@ module.exports = {
         children: [
           '/problem-record/vue单页应用刷新网页后vuex的state数据丢失的解决方案',
           '/problem-record/Cannot assign to read only property exports of object',
-          '/problem-record/Homebrew安装'
+          '/problem-record/Homebrew安装',
+          '/problem-record/常见问题'
         ]
       },
       {

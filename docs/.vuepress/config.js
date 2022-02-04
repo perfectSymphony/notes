@@ -31,7 +31,8 @@ module.exports = {
         children: [
           '/html_docs/html相关面试题',
           '/html_docs/table使用总结',
-          '/html_docs/localStorage和sessionStorage区别'
+          '/html_docs/localStorage和sessionStorage区别',
+          '/html_docs/meta标签和浏览器缓存关系'
         ]
       },
       {
@@ -161,6 +162,7 @@ module.exports = {
         children: [
           '/git_docs/详解git pull和git fetch的区别',
           '/git_docs/git stash的用法总结',
+          '/git_docs/linux重启tomcat命令',
           '/git_docs/Git常见问题总结',
         ]
       }, 

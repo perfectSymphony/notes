@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Nginx的gzip配置参数 | perfectSymphony</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/home.jpeg">
+    <meta name="description" content="我的个人网站">
+    
+    <link rel="preload" href="/assets/css/0.styles.7cfabf05.css" as="style"><link rel="preload" href="/assets/js/app.4b39bc53.js" as="script"><link rel="preload" href="/assets/js/2.4af352f8.js" as="script"><link rel="preload" href="/assets/js/42.61d38a90.js" as="script"><link rel="prefetch" href="/assets/js/10.89e900ad.js"><link rel="prefetch" href="/assets/js/100.f2ac7134.js"><link rel="prefetch" href="/assets/js/101.b013177c.js"><link rel="prefetch" href="/assets/js/102.abb2c048.js"><link rel="prefetch" href="/assets/js/103.e31df9e3.js"><link rel="prefetch" href="/assets/js/104.6a80fe4a.js"><link rel="prefetch" href="/assets/js/105.a7d8f823.js"><link rel="prefetch" href="/assets/js/106.82d5216b.js"><link rel="prefetch" href="/assets/js/107.7365b7fa.js"><link rel="prefetch" href="/assets/js/108.aee592c7.js"><link rel="prefetch" href="/assets/js/109.63adee0d.js"><link rel="prefetch" href="/assets/js/11.4d027bef.js"><link rel="prefetch" href="/assets/js/110.bed49f0d.js"><link rel="prefetch" href="/assets/js/111.e45f0c4f.js"><link rel="prefetch" href="/assets/js/112.f65dfc91.js"><link rel="prefetch" href="/assets/js/113.4059fcd4.js"><link rel="prefetch" href="/assets/js/114.caefd5fd.js"><link rel="prefetch" href="/assets/js/115.dabc5cab.js"><link rel="prefetch" href="/assets/js/12.0bc24e19.js"><link rel="prefetch" href="/assets/js/13.56c7b68a.js"><link rel="prefetch" href="/assets/js/14.28a4ff39.js"><link rel="prefetch" href="/assets/js/15.7d515458.js"><link rel="prefetch" href="/assets/js/16.541e8375.js"><link rel="prefetch" href="/assets/js/17.46cc247a.js"><link rel="prefetch" href="/assets/js/18.c38dc9b0.js"><link rel="prefetch" href="/assets/js/19.d8a73027.js"><link rel="prefetch" href="/assets/js/20.2fa8e4df.js"><link rel="prefetch" href="/assets/js/21.34e85c3a.js"><link rel="prefetch" href="/assets/js/22.dadeac8c.js"><link rel="prefetch" href="/assets/js/23.1be7ffcc.js"><link rel="prefetch" href="/assets/js/24.1f100aba.js"><link rel="prefetch" href="/assets/js/25.bbb62509.js"><link rel="prefetch" href="/assets/js/26.89c79bac.js"><link rel="prefetch" href="/assets/js/27.1e449829.js"><link rel="prefetch" href="/assets/js/28.4d4c5f75.js"><link rel="prefetch" href="/assets/js/29.0227ce6c.js"><link rel="prefetch" href="/assets/js/3.a593664e.js"><link rel="prefetch" href="/assets/js/30.407ea312.js"><link rel="prefetch" href="/assets/js/31.281860cc.js"><link rel="prefetch" href="/assets/js/32.4540a05d.js"><link rel="prefetch" href="/assets/js/33.aa0ec1d8.js"><link rel="prefetch" href="/assets/js/34.4ffaf322.js"><link rel="prefetch" href="/assets/js/35.931621f1.js"><link rel="prefetch" href="/assets/js/36.29567b43.js"><link rel="prefetch" href="/assets/js/37.f98a9ec3.js"><link rel="prefetch" href="/assets/js/38.87cf719a.js"><link rel="prefetch" href="/assets/js/39.214ea35f.js"><link rel="prefetch" href="/assets/js/4.e6aa4784.js"><link rel="prefetch" href="/assets/js/40.2f899ba1.js"><link rel="prefetch" href="/assets/js/41.47281ca6.js"><link rel="prefetch" href="/assets/js/43.1ee1b96c.js"><link rel="prefetch" href="/assets/js/44.e7f07034.js"><link rel="prefetch" href="/assets/js/45.d40f5e1b.js"><link rel="prefetch" href="/assets/js/46.85caa132.js"><link rel="prefetch" href="/assets/js/47.9c1dd6ce.js"><link rel="prefetch" href="/assets/js/48.2eac8b06.js"><link rel="prefetch" href="/assets/js/49.2da208c7.js"><link rel="prefetch" href="/assets/js/5.0975df89.js"><link rel="prefetch" href="/assets/js/50.cf2f1699.js"><link rel="prefetch" href="/assets/js/51.d1a2cfb5.js"><link rel="prefetch" href="/assets/js/52.6f959ea5.js"><link rel="prefetch" href="/assets/js/53.f4ae11f6.js"><link rel="prefetch" href="/assets/js/54.9cf1b62f.js"><link rel="prefetch" href="/assets/js/55.1cec78d3.js"><link rel="prefetch" href="/assets/js/56.5ee52647.js"><link rel="prefetch" href="/assets/js/57.02d42f8f.js"><link rel="prefetch" href="/assets/js/58.f6ba67c9.js"><link rel="prefetch" href="/assets/js/59.7a157096.js"><link rel="prefetch" href="/assets/js/6.c50df69f.js"><link rel="prefetch" href="/assets/js/60.ad9c4f02.js"><link rel="prefetch" href="/assets/js/61.e25e3c2b.js"><link rel="prefetch" href="/assets/js/62.9f6060b6.js"><link rel="prefetch" href="/assets/js/63.105e281d.js"><link rel="prefetch" href="/assets/js/64.153fa604.js"><link rel="prefetch" href="/assets/js/65.e9b4e4f3.js"><link rel="prefetch" href="/assets/js/66.87510824.js"><link rel="prefetch" href="/assets/js/67.641c69d4.js"><link rel="prefetch" href="/assets/js/68.8d023b50.js"><link rel="prefetch" href="/assets/js/69.72a45876.js"><link rel="prefetch" href="/assets/js/7.f1376b7f.js"><link rel="prefetch" href="/assets/js/70.79cccaa7.js"><link rel="prefetch" href="/assets/js/71.5cf7bba4.js"><link rel="prefetch" href="/assets/js/72.f8dc7b06.js"><link rel="prefetch" href="/assets/js/73.17516d4a.js"><link rel="prefetch" href="/assets/js/74.0fe5e19a.js"><link rel="prefetch" href="/assets/js/75.c66b94fb.js"><link rel="prefetch" href="/assets/js/76.57820082.js"><link rel="prefetch" href="/assets/js/77.f5750f87.js"><link rel="prefetch" href="/assets/js/78.f3baed0f.js"><link rel="prefetch" href="/assets/js/79.a853d6e7.js"><link rel="prefetch" href="/assets/js/8.2a7a2f55.js"><link rel="prefetch" href="/assets/js/80.73404da2.js"><link rel="prefetch" href="/assets/js/81.65994407.js"><link rel="prefetch" href="/assets/js/82.fa33ab11.js"><link rel="prefetch" href="/assets/js/83.2e0d0b41.js"><link rel="prefetch" href="/assets/js/84.b9e295d8.js"><link rel="prefetch" href="/assets/js/85.4933000a.js"><link rel="prefetch" href="/assets/js/86.dd40f700.js"><link rel="prefetch" href="/assets/js/87.82d37550.js"><link rel="prefetch" href="/assets/js/88.9c238dcc.js"><link rel="prefetch" href="/assets/js/89.8970a331.js"><link rel="prefetch" href="/assets/js/9.b49605e3.js"><link rel="prefetch" href="/assets/js/90.908f49ac.js"><link rel="prefetch" href="/assets/js/91.9ebc857d.js"><link rel="prefetch" href="/assets/js/92.d45cbd5f.js"><link rel="prefetch" href="/assets/js/93.682d0797.js"><link rel="prefetch" href="/assets/js/94.29fd3349.js"><link rel="prefetch" href="/assets/js/95.135358ba.js"><link rel="prefetch" href="/assets/js/96.ea3e36dc.js"><link rel="prefetch" href="/assets/js/97.d4d47bb8.js"><link rel="prefetch" href="/assets/js/98.f8ae5f29.js"><link rel="prefetch" href="/assets/js/99.cec69f45.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7cfabf05.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">perfectSymphony</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="https://www.cnblogs.com/myprogramer/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  博客园
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://github.com/perfectSymphony/notes.git" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="https://www.cnblogs.com/myprogramer/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  博客园
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://github.com/perfectSymphony/notes.git" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>HTML</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/html_docs/html相关面试题.html" class="sidebar-link">html相关面试题</a></li><li><a href="/html_docs/table使用总结.html" class="sidebar-link">table使用总结</a></li><li><a href="/html_docs/localStorage和sessionStorage区别.html" class="sidebar-link">localStorage和sessionStorage区别</a></li><li><a href="/html_docs/meta标签和浏览器缓存关系.html" class="sidebar-link">meta标签和浏览器缓存关系</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>CSS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JavaScript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>工具篇</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>vue</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>webpack</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>uni-app</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>React</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>NodeJS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>GIT</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Nginx</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>HTTP</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/http/HTTP和HTTPS的区别.html" class="sidebar-link">HTTP和HTTPS的区别</a></li><li><a href="/http/揭秘简单请求和复杂请求.html" class="sidebar-link">揭秘简单请求和复杂请求</a></li><li><a href="/http/从输入url到页面加载完成发生了什么.html" class="sidebar-link">从输入url到页面加载完成发生了什么</a></li><li><a href="/http/HTTP状态码汇总.html" class="sidebar-link">HTTP状态码汇总</a></li><li><a href="/http/Nginx的gzip配置参数.html" class="active sidebar-link">Nginx的gzip配置参数</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/http/Nginx的gzip配置参数.html#nginx的gzip配置参数" class="sidebar-link">Nginx的gzip配置参数</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>跨域</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>网络</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>性能优化</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>数据结构与算法</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>架构</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>概念篇</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>正则表达式</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>移动直播</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>问题记录</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>语录篇</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>功能点预览</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="nginx的gzip配置参数"><a href="#nginx的gzip配置参数" class="header-anchor">#</a> Nginx的gzip配置参数</h2> <p>首先浏览器请求某个 URL 地址，并在请求的头 (head) 中设置属性 accept-encoding 值为 gzip, deflate，表明浏览器支持 gzip 和 deflate 这两种压缩方式;<br>
+WEB 服务器接收到请求后判断浏览器是否支持压缩，如果支持就传送压缩后的响应内容，否则传送不经过压缩的内容;浏览器获取响应内容后，判断内容是否被压缩，如果是则解压缩，然后显示响应页面的内容。<br>
+　　在实际的应用中我们发现压缩的比率往往在 3 到 10 倍，也就是本来 50k 大小的页面，采用压缩后实际传输的内容大小只有 5 至 15k 大小，这可以大大节省服务器的网络带宽，同时如果应用程序的响应足够快时，网站的速度瓶颈就转到了网络的传输速度上，因此内容压缩后就可以大大的提升页面的浏览速度。</p> <h4 id="配置启用gzip"><a href="#配置启用gzip" class="header-anchor">#</a> 配置启用gzip</h4> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token function">gzip</span> on<span class="token punctuation">;</span>
+gzip_min_length  5k<span class="token punctuation">;</span>
+gzip_buffers     <span class="token number">4</span> 16k<span class="token punctuation">;</span>
+<span class="token comment">#gzip_http_version 1.0;</span>
+gzip_comp_level <span class="token number">3</span><span class="token punctuation">;</span>
+gzip_types       text/plain application/javascript text/css application/xml text/javascript application/x-httpd-php image/jpeg image/gif image/png<span class="token punctuation">;</span>
+gzip_vary on<span class="token punctuation">;</span>
+
+<span class="token comment"># :wq保存退出，重新加载Nginx</span>
+
+/usr/local/nginx/sbin/nginx -s reload
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h4 id="gzip"><a href="#gzip" class="header-anchor">#</a> gzip</h4> <p>决定是否开启gzip模块
+param:on|off
+example:gzip on;</p> <h4 id="gzip-buffers"><a href="#gzip-buffers" class="header-anchor">#</a> gzip_buffers</h4> <p>设置gzip申请内存的大小,其作用是按块大小的倍数申请内存空间
+param1:int
+param2:int(k) 后面单位是k
+example: gzip_buffers 4 8k;</p> <h4 id="gzip-comp-level"><a href="#gzip-comp-level" class="header-anchor">#</a> gzip_comp_level</h4> <p>设置gzip压缩等级，等级越底压缩速度越快文件压缩比越小，反之速度越慢文件压缩比越大
+param:1-9
+example:gzip_com_level 1;</p> <h4 id="gzip-min-length"><a href="#gzip-min-length" class="header-anchor">#</a> gzip_min_length</h4> <p>当返回内容大于此值时才会使用gzip进行压缩,以K为单位,当值为0时，所有页面都进行压缩
+param:int
+example:gzip_min_length 1000;</p> <h4 id="gzip-http-version"><a href="#gzip-http-version" class="header-anchor">#</a> gzip_http_version</h4> <p>用于识别http协议的版本，早期的浏览器不支持gzip压缩，用户会看到乱码，所以为了支持前期版本加了此选项,目前此项基本可以忽略
+param: 1.0|1.1
+example:gzip_http_version 1.0</p> <h4 id="gzip-proxied"><a href="#gzip-proxied" class="header-anchor">#</a> gzip_proxied</h4> <p>Nginx做为反向代理的时候启用，
+param:off|expired|no-cache|no-sotre|private|no_last_modified|no_etag|auth|any]
+expample:gzip_proxied no-cache;
+off – 关闭所有的代理结果数据压缩
+expired – 启用压缩，如果header中包含”Expires”头信息
+no-cache – 启用压缩，如果header中包含”Cache-Control:no-cache”头信息
+no-store – 启用压缩，如果header中包含”Cache-Control:no-store”头信息
+private – 启用压缩，如果header中包含”Cache-Control:private”头信息
+no_last_modified – 启用压缩，如果header中包含”Last_Modified”头信息
+no_etag – 启用压缩，如果header中包含“ETag”头信息
+auth – 启用压缩，如果header中包含“Authorization”头信息
+any – 无条件压缩所有结果数据</p> <h4 id="gzip-types"><a href="#gzip-types" class="header-anchor">#</a> gzip_types</h4> <p>设置需要压缩的MIME类型,非设置值不进行压缩
+param:text/html|application/x-javascript|text/css|application/xml
+example:gzip_types text/html;</p> <h4 id="demo"><a href="#demo" class="header-anchor">#</a> Demo</h4> <p>gzip on;
+gzip_min_length 1000;
+gzip_buffers 4 8k;
+gzip_types text/html application/x-javascript text/css application/xml;</p> <h4 id="使用curl测试"><a href="#使用curl测试" class="header-anchor">#</a> 使用curl测试</h4> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token function">curl</span> -I -H <span class="token string">&quot;Accept-Encoding: gzip, deflate&quot;</span> <span class="token string">&quot;http://www.slyar.com/blog/&quot;</span>
+
+HTTP/1.1 <span class="token number">200</span> OK
+Server: nginx/1.0.15
+Date: Sun, <span class="token number">26</span> Aug <span class="token number">2012</span> <span class="token number">18</span>:13:09 GMT
+Content-Type: text/html<span class="token punctuation">;</span> <span class="token assign-left variable">charset</span><span class="token operator">=</span>UTF-8
+Connection: keep-alive
+X-Powered-By: PHP/5.2.17p1
+X-Pingback: http://www.slyar.com/blog/xmlrpc.php
+Content-Encoding: <span class="token function">gzip</span>
+
+页面成功压缩
+
+ 
+
+<span class="token function">curl</span> -I -H <span class="token string">&quot;Accept-Encoding: gzip, deflate&quot;</span> <span class="token string">&quot;http://www.slyar.com/blog/wp-content/plugins/photonic/include/css/photonic.css&quot;</span>
+
+HTTP/1.1 <span class="token number">200</span> OK
+Server: nginx/1.0.15
+Date: Sun, <span class="token number">26</span> Aug <span class="token number">2012</span> <span class="token number">18</span>:21:25 GMT
+Content-Type: text/css
+Last-Modified: Sun, <span class="token number">26</span> Aug <span class="token number">2012</span> <span class="token number">15</span>:17:07 GMT
+Connection: keep-alive
+Expires: Mon, <span class="token number">27</span> Aug <span class="token number">2012</span> 06:21:25 GMT
+Cache-Control: max-age<span class="token operator">=</span><span class="token number">43200</span>
+Content-Encoding: <span class="token function">gzip</span>
+
+css文件成功压缩
+
+<span class="token function">curl</span> -I -H <span class="token string">&quot;Accept-Encoding: gzip, deflate&quot;</span> <span class="token string">&quot;http://www.slyar.com/blog/wp-includes/js/jquery/jquery.js&quot;</span>
+
+HTTP/1.1 <span class="token number">200</span> OK
+Server: nginx/1.0.15
+Date: Sun, <span class="token number">26</span> Aug <span class="token number">2012</span> <span class="token number">18</span>:21:38 GMT
+Content-Type: application/x-javascript
+Last-Modified: Thu, <span class="token number">12</span> Jul <span class="token number">2012</span> <span class="token number">17</span>:42:45 GMT
+Connection: keep-alive
+Expires: Mon, <span class="token number">27</span> Aug <span class="token number">2012</span> 06:21:38 GMT
+Cache-Control: max-age<span class="token operator">=</span><span class="token number">43200</span>
+Content-Encoding: <span class="token function">gzip</span>
+
+js文件成功压缩
+
+<span class="token function">curl</span> -I -H <span class="token string">&quot;Accept-Encoding: gzip, deflate&quot;</span> <span class="token string">&quot;http://www.slyar.com/blog/wp-content/uploads/2012/08/2012-08-23_203542.png&quot;</span>
+
+HTTP/1.1 <span class="token number">200</span> OK
+Server: nginx/1.0.15
+Date: Sun, <span class="token number">26</span> Aug <span class="token number">2012</span> <span class="token number">18</span>:22:45 GMT
+Content-Type: image/png
+Last-Modified: Thu, <span class="token number">23</span> Aug <span class="token number">2012</span> <span class="token number">13</span>:50:53 GMT
+Connection: keep-alive
+Expires: Tue, <span class="token number">25</span> Sep <span class="token number">2012</span> <span class="token number">18</span>:22:45 GMT
+Cache-Control: max-age<span class="token operator">=</span><span class="token number">2592000</span>
+Content-Encoding: <span class="token function">gzip</span>
+
+图片成功压缩
+
+<span class="token function">curl</span> -I -H <span class="token string">&quot;Accept-Encoding: gzip, deflate&quot;</span> <span class="token string">&quot;http://www.slyar.com/blog/wp-content/plugins/wp-multicollinks/wp-multicollinks.css&quot;</span>
+
+HTTP/1.1 <span class="token number">200</span> OK
+Server: nginx/1.0.15
+Date: Sun, <span class="token number">26</span> Aug <span class="token number">2012</span> <span class="token number">18</span>:23:27 GMT
+Content-Type: text/css
+Content-Length: <span class="token number">180</span>
+Last-Modified: Sat, 02 May <span class="token number">2009</span> 08:46:15 GMT
+Connection: keep-alive
+Expires: Mon, <span class="token number">27</span> Aug <span class="token number">2012</span> 06:23:27 GMT
+Cache-Control: max-age<span class="token operator">=</span><span class="token number">43200</span>
+Accept-Ranges: bytes
+
+最后来个不到1K的文件，由于我的阈值是1K，所以没压缩
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br></div></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/perfectSymphony/notes/edit/master/docs/http/Nginx的gzip配置参数.md" target="_blank" rel="noopener noreferrer">在GitHub上编辑此页</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">上次更新时间:</span> <span class="time">2/6/2022, 11:45:18 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/http/HTTP状态码汇总.html" class="prev">
+        HTTP状态码汇总
+      </a></span> <span class="next"><a href="/cross-domain/jsonp原理.html">
+        jsonp原理
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.4b39bc53.js" defer></script><script src="/assets/js/2.4af352f8.js" defer></script><script src="/assets/js/42.61d38a90.js" defer></script>
+  </body>
+</html>

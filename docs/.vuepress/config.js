@@ -89,7 +89,8 @@ module.exports = {
           '/js_docs/javascript面试题七问七答',
           '/js_docs/JavaScript提升代码质量的最佳实践列表',
           '/js_docs/null和undefined的区别',
-          '/js_docs/Javascript中的运算符'
+          '/js_docs/Javascript中的运算符',
+          '/js_docs/Javascript清除缓存的几种方法'
          ],
       },
       {
@@ -164,6 +165,7 @@ module.exports = {
           '/git_docs/git stash的用法总结',
           '/git_docs/linux重启tomcat命令',
           '/git_docs/Git常见问题总结',
+          '/git_docs/Mac系统下查看和生成SSH-Key',
         ]
       }, 
       {

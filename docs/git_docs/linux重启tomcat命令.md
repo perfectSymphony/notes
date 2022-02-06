@@ -29,5 +29,12 @@ sh startup.sh或者./startup.sh
 
 重启可以理解为先关闭tomcat+再启动tomcat
 
+```sh
 sh shutdown.sh（关闭）
 sh startup.sh或者./startup.sh（启动）
+```
+#### 6.查看tomcat版本
+
+先进到tomcat的bin目录下（cd /tomcat目录/bin），在执行./version.sh
+
+![HmobXd.png](https://s4.ax1x.com/2022/02/05/HmobXd.png)

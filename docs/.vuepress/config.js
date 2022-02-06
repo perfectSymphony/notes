@@ -186,6 +186,7 @@ module.exports = {
           '/http/揭秘简单请求和复杂请求',
           '/http/从输入url到页面加载完成发生了什么',
           '/http/HTTP状态码汇总',
+          '/http/Nginx的gzip配置参数'
         ]
       }, 
       {
@@ -212,7 +213,7 @@ module.exports = {
         collapsable: true,
         sidebarDepth: 3,
         children: [
-          '/optimization/前端性能优化的七大手段',
+          '/optimization/前端性能优化点汇总',
           '/optimization/浅谈js防抖和节流',
         ]
       },

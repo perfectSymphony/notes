@@ -38,3 +38,17 @@ sh startup.sh或者./startup.sh（启动）
 先进到tomcat的bin目录下（cd /tomcat目录/bin），在执行./version.sh
 
 ![HmobXd.png](https://s4.ax1x.com/2022/02/05/HmobXd.png)
+
+#### 7.查看tomcat端口号
+
+```sh
+# 1、查看tomcat进程
+ ps -ef | grep tomcat
+
+# 2、根据进程号查看端口号
+netstat -anop | grep 5517
+```
+
+#### tomcat开启Gzip原理介绍：
+
+HTTP 压缩可以大大提高浏览网站的速度，它的原理是，在客户端请求服务器对应资源后，从服务器端将资源文件压缩，再输出到客户端，由客户端的浏览器负责解压缩并浏览。相对于普通的浏览过程HTML ,CSS,Javascript , Text ，它可以节省40%左右的流量。更为重要的是，它可以对动态生成的，包括CGI、PHP , JSP , ASP , Servlet,SHTML等输出的网页也能进行压缩，压缩效率也很高。

@@ -90,7 +90,8 @@ module.exports = {
           '/js_docs/JavaScript提升代码质量的最佳实践列表',
           '/js_docs/null和undefined的区别',
           '/js_docs/Javascript中的运算符',
-          '/js_docs/Javascript清除缓存的几种方法'
+          '/js_docs/Javascript清除缓存的几种方法',
+          '/js_docs/Javascript问题汇总'
          ],
       },
       {

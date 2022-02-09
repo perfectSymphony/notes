@@ -53,6 +53,7 @@ module.exports = {
           '/css_docs/CSS命名规范——BEM思想',
           '/css_docs/flex为1的含义',
           '/css_docs/display:inline-block元素之间空隙的产生原因和解决办法',
+          '/css_docs/常见问题总结'
         ]
       },     
       {

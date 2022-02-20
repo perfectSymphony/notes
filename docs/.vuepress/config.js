@@ -189,7 +189,8 @@ module.exports = {
           '/http/从输入url到页面加载完成发生了什么',
           '/http/HTTP状态码汇总',
           '/http/Nginx的gzip配置参数',
-          '/http/浅谈preflight-request'
+          '/http/浅谈preflight-request',
+          '/http/前端浏览器缓存及代码部署'
         ]
       }, 
       {

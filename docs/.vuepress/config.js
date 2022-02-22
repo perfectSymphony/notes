@@ -92,7 +92,8 @@ module.exports = {
           '/js_docs/null和undefined的区别',
           '/js_docs/Javascript中的运算符',
           '/js_docs/Javascript清除缓存的几种方法',
-          '/js_docs/Javascript问题汇总'
+          '/js_docs/Javascript问题汇总',
+          '/js_docs/H5图片上传实现'
          ],
       },
       {

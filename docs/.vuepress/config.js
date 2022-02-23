@@ -169,6 +169,7 @@ module.exports = {
           '/git_docs/linux重启tomcat命令',
           '/git_docs/Git常见问题总结',
           '/git_docs/Mac系统下查看和生成SSH-Key',
+          '/git_docs/如何将本地项目上传到Github',
         ]
       }, 
       {

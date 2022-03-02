@@ -20,7 +20,7 @@ React一共有10个hooks，`useState`、`useEffect`、`useCallback`、`useMemo`�
 
 使用useEffect应该注意的点：
 
-    - 没有依赖项，则每次 render 后都会重新执行
+ - 没有依赖项，则每次 render 后都会重新执行
 
     ```sh
         useEffect(()=>{
@@ -28,7 +28,7 @@ React一共有10个hooks，`useState`、`useEffect`、`useCallback`、`useMemo`�
         })
     ```
 
-    - 空数组作为依赖项，则只在首次执行时触发，对应到 Class 组件就是 componentDidMount
+- 空数组作为依赖项，则只在首次执行时触发，对应到 Class 组件就是 componentDidMount
 
     ```javascript
         useEffect(()=>{
@@ -36,7 +36,7 @@ React一共有10个hooks，`useState`、`useEffect`、`useCallback`、`useMemo`�
         },[])
     ```
 
-    - 可以返回一个函数，用在组件销毁的时候做一些清理的操作
+- 可以返回一个函数，用在组件销毁的时候做一些清理的操作
 
     ```sh
         const [size,setResize] = useState({})

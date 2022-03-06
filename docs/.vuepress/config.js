@@ -179,6 +179,7 @@ module.exports = {
         children: [
           '/nginx/Nginx正向代理与反向代理',
           '/nginx/nginx的gzip设置详解',
+          '/nginx/Nginx虚拟目录alias和root目录'
         ]
       }, 
       {

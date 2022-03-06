@@ -157,6 +157,7 @@ module.exports = {
         sidebarDepth: 3,
         children: [
           '/node_docs/NodeJS优缺点及适用场景讨论',
+          '/node_docs/node中间层',
         ]
       },           
       {

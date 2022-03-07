@@ -244,6 +244,7 @@ module.exports = {
           '/structure/BFF架构设计',
           '/structure/微前端架构理念',
           '/structure/什么是MPA、SPA',
+          '/structure/前端实现自动化部署'
         ]
       }, 
       {

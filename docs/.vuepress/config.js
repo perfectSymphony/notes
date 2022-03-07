@@ -139,6 +139,7 @@ module.exports = {
         sidebarDepth: 3,
         children: [
           '/uni-app/uni-app利用rich-text展示富文本内容,图片的宽度溢出屏幕',
+          '/uni-app/uni-app项目公共方法封装',
         ]
       },      
       {

@@ -122,6 +122,7 @@ module.exports = {
           '/vue_docs/vue进阶之路-vue3新特性',
           '/vue_docs/vue3面试中必问的5个考点',
           '/vue_docs/Vue3.0响应式数据原理',
+          '/vue_docs/Vue中的watch与computed'
         ]
       },
       {

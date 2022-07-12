@@ -232,4 +232,4 @@ css:
 
 （4）BFC包含浮动的块
 
-利用overflow:hidden清除浮动，因为浮动的盒子无法撑出处于标准文档流的父盒子的height。
+利用overflow:hidden清除浮动，因为浮动的盒子无法撑处于标准文档流的父盒子的height。

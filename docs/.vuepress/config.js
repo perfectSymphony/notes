@@ -195,7 +195,7 @@ module.exports = {
         children: [
           '/http/HTTP和HTTPS的区别',
           '/http/揭秘简单请求和复杂请求',
-          '/http/从输入url到页面加载完成发生了什么',
+          '/http/浏览器渲染机制',
           '/http/HTTP状态码汇总',
           '/http/Nginx的gzip配置参数',
           '/http/浅谈preflight-request',

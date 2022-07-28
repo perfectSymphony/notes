@@ -116,7 +116,7 @@ setTimeout(function() {
 
 **构造器调用模式:**
 
-new一个函数时，背地里会将创建一个连接到prototype成员的新对象，同时this会被绑定到那个新对象上
+new一个函数时，底层实现会将创建一个连接到prototype成员的新对象，同时this会被绑定到那个新对象上
 
 ```sh
 function Person(name,age){

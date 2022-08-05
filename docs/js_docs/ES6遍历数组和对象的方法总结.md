@@ -143,7 +143,7 @@ for(var i in arr) {
 
 ### ES6遍历对象的方法总结
 
-1、for … in 循环遍历对象自身的和继承的可枚举属性(循环遍历对象自身的和继承的可枚举属性(不含Symbol属性))。
+1、for … in 循环遍历对象自身的和继承的可枚举属性(不含Symbol属性)。
 
 ![aYLePO.png](https://s1.ax1x.com/2020/08/02/aYLePO.png)
 

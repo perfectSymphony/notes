@@ -20,7 +20,7 @@ module.exports = {
     editLinkText: '在GitHub上编辑此页',
     nav:[ // 导航栏配置
       {text: '博客园', link: 'https://www.cnblogs.com/myprogramer/' },
-      // {text: '算法题库', link: '/algorithm/'},
+      {text: '算法题库', link: '/css_docs/CSS中的BFC详解'},
       // {text: '微博', link: 'https://baidu.com'}      
     ],
     sidebar: [
@@ -298,6 +298,15 @@ module.exports = {
           '/philosophy/语录篇三',
         ]
       }, 
+      {
+        title: '每日反思',  
+        collapsable: true,
+        sidebarDepth: 3,
+        children: [
+          '/review/2022-10-13',
+          '/review/2022-10-14',
+        ]
+      },
       {
         title: '功能点预览',   
         collapsable: true,

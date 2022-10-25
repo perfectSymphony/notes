@@ -94,8 +94,7 @@
 </script>
 ```
 
-## 四、Vue组件间的参数传递
-![xsPPbV.jpg](https://s1.ax1x.com/2022/10/18/xsPPbV.jpg)
+## 四、Vue组件间的参数传
 - 父子组件通信
  - 事件机制(**父->子props,子->父 $on、$emit)
  - 获取父子组件实例 $parent、$children
@@ -126,11 +125,9 @@ history 模式下，前端的 URL 必须和实际向后端发起请求的 URL �
 不同点：
 AngularJS的学习成本高，比如增加了Dependency Injection特性，而Vue.js本身提供的API都比较简单、直观；在性能上，AngularJS依赖对数据做脏检查，所以Watcher越多越慢；Vue.js使用基于依赖追踪的观察并且使用异步队列更新，所有的数据都是独立触发的。
 
-**2.与React的区别**
-相同点：
-React采用特殊的JSX语法，Vue.js在组件开发中也推崇编写.vue特殊文件格式，对文件内容都有一些约定，两者都需要编译后使用；中心思想相同：一切都是组件，组件实例之间可以嵌套；都提供合理的钩子函数，可以让开发者定制化地去处理需求；都不内置列数AJAX，Route等功能到核心包，而是以插件的方式加载；在组件开发中都支持mixins的特性。
-不同点：
-React采用的Virtual DOM会对渲染出来的结果做脏检查；Vue.js在模板中提供了指令，过滤器等，可以非常方便，快捷地操作Virtual DOM。
+**2.与React的区别** <br/>
+
+[vue与react的区别](./vue与react区别.md)
 
 ## 七、vue路由的钩子函数 [参看官网：导航守卫](https://router.vuejs.org/zh/guide/advanced/navigation-guards.html#全局前置守卫)
 

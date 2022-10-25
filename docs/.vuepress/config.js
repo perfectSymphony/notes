@@ -125,7 +125,8 @@ module.exports = {
           '/vue_docs/Vue3.0响应式数据原理',
           '/vue_docs/Vue中的watch与computed',
           '/vue_docs/vue中的this指向',
-          '/vue_docs/Vue2.4中$attrs和$listeners的使用'
+          '/vue_docs/Vue2.4中$attrs和$listeners的使用',
+          '/vue_docs/vue与react区别.md'
         ]
       },
       {

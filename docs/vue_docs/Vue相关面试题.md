@@ -68,7 +68,7 @@
 
 ## 三、 Vue实现数据双向绑定的原理 Object.defineProperty():
 
-**js实现简单的双向绑定**
+**简单双向数据绑定**
 
 ```sh
 <body>

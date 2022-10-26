@@ -173,12 +173,12 @@ routes: [
  ```
 
 ### vue-router与location.href的用法区别
-1⃣️ vue-router使用pushState进行路由更新、静态跳转、页面不会重新加载；location.href会触发浏览器，页面会重新加载一次。
+1、vue-router使用pushState进行路由更新、静态跳转、页面不会重新加载；location.href会触发浏览器，页面会重新加载一次。
 
-2⃣️ vue-router使用diff算法，实现按需加载，减少dom操作
+2、vue-router使用diff算法，实现按需加载，减少dom操作
 
-3⃣️ vue-router是路由跳转或者是同一页面跳转；location.href是不同页面间的跳转；
-4⃣️ vue-router是异步加载this.$nextTick(()=>{获取url})；location.href同步加载
+3、vue-router是路由跳转或者是同一页面跳转；location.href是不同页面间的跳转；
+4、vue-router是异步加载this.$nextTick(()=>{获取url})；location.href同步加载
 
 ### 其他用法
 

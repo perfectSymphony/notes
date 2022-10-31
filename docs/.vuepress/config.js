@@ -304,7 +304,7 @@ module.exports = {
         collapsable: true,
         sidebarDepth: 3,
         children: [
-          '/review/2022-10-13',
+          '/review/每日随笔记',
           '/review/2022-10-14',
         ]
       },

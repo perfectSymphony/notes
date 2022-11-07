@@ -307,15 +307,7 @@ module.exports = {
           '/review/每日随笔记',
           '/review/2022-10-14',
         ]
-      },
-      {
-        title: '功能点预览',   
-        collapsable: true,
-        sidebarDepth: 3,
-        children: [
-          '/preview/one',
-        ]
-      },                                                            
+      }                                                            
     ], // 侧边栏配置
   }
 };

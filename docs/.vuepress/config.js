@@ -304,8 +304,8 @@ module.exports = {
         collapsable: true,
         sidebarDepth: 3,
         children: [
-          '/review/每日随笔记',
-          '/review/2022-10-14',
+          '/review/每日随笔',
+          '/review/2022-12',
         ]
       }                                                            
     ], // 侧边栏配置

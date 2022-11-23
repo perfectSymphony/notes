@@ -154,7 +154,7 @@ module.exports = {
         children: [
           '/react_docs/React的生命周期',
           '/react_docs/受控组件和非受控组件',
-          '/react_docs/hooks常用API总结及redux在函数组件中的使用'
+          '/react_docs/hooks常用API总结及redux工作流程分析'
         ]
       },      
       {

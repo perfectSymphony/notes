@@ -1,6 +1,6 @@
-### hooks常用API总结 && redux在函数组件中的使用
+### hooks常用API总结 & redux工作流程分析
 
-#### 一、hooks常用API总结
+### 一、hooks常用API总结
 
 React一共有10个hooks，`useState`、`useEffect`、`useCallback`、`useMemo`、`useRef`、`useContext`等等
 
@@ -160,23 +160,135 @@ React一共有10个hooks，`useState`、`useEffect`、`useCallback`、`useMemo`�
 - 为什么不使用全局变量而要去使用这种复杂机制进行共享？能够进行数据的绑定，也就是Context数据变化的时候需要自动刷新
 
 
-#### 二、redux在函数组件中的使用
+### 二、redux工作流程分析
 
-##### state、action、reducer关系
+#### (1) Redux的设计思想：
+
+- React 只是 DOM 的一个抽象层，并不是web应用的完整解决方案。没有涉及代码结构和组件间的通信。
+- web应用是一个状态机，视图与状态是一一对应的
+- 所有的状态，保存在一个对象里面（唯一数据源）、
+- 目的：实现集中式状态管理
+- 如果你不知道是否需要 Redux ，那就是不需要它
+- 只有遇到 React 实在解决不了的问题，你才需要Redux
+
   - reducer是一个纯函数。对store的修改都通过action描述动作去纯函数修改store而不是直接修改store数据。
   - 优点：
-    - 可预测性
-    - 易于调试
+     - 可预测性
+     - 易于调试
+----
 
-![HCDWPs.jpg](https://s4.ax1x.com/2022/01/30/HCDWPs.jpg)
+ - 简单说，如果你的UI层非常简单，没有很多互动，Redux就是不必要的，用了反而增加复杂性
+ - 比如：
+ - 用户的使用方式非常简单
+ - 用户之间没有协作
+ - 不需要与服务器大量交互，也没有使用WebSocket
+ - 视图层（View）只从单一来源获取数据
 
-##### redux的使用逻辑
+ ---
+ - 需要使用Redux的项目：
+   - 用户的使用方式复杂
+   - 不同身份的用户有不同的使用方式（比如普通用户和管理员）
+   - 多个用户之间可以协作
+   - 与服务器大量交互，或者使用了WebSocket
+   - View 要从多个来源获取数据
 
-![HCDcVg.jpg](https://s4.ax1x.com/2022/01/30/HCDcVg.jpg)
+ ---
 
-##### redux处理异步逻辑
+- 从组件层面考虑，什么样子需要Redux：
+  - 某个组件的状态，需要共享
+  - 某个状态需要在任何地方都可以拿到
+  - 一个组件需要改变全局状态
+  - 一个组件需要改变另一个组件的状态
+
+
+#### (2) 三大原则
+
+ - 单一数据源
+> 整个应用的state被存储在一棵对象结构树中,（整个state不是组件中的state，请不要混淆）,并且这个对象结构只存在唯一一个store中
+
+ - State 是只读的
+> 唯一改变 state 的方法就是触发 dispatch+action, action是一个用于描述已发生时间的**普通对象**,（action普通对象必须要有`type`属性，值是什么无所谓，其余属性也无所谓）
+
+ - 数据的改变必须通过纯函数完成
+
+ > 为了描述action如何改变state tree，我们需要编写reducer; reducer必须是纯函数，它接收先前的state和action，并返回新的state（不会合并的，自行注意这个坑）; 一个函数的返回结果只接收其形参的影响，则其就是纯函数
+
+#### (3) 工作流程图
+ 
+![z828aR.png](https://s1.ax1x.com/2022/11/23/z828aR.png)
+
+ - 完整版
+
+<strong>先来个简单版本的：</strong>
+
+ - Store 相当于老板
+ - Reducers 相当于厨师
+ - Action Creators相当于服务员
+ - React Component 相当于顾客
+ - 打个比方：
+1、顾客（React Component）想吃点东西，于是就把吃啥告诉了服务员（Action Creators）<br/>
+2、服务员（Action Creators）就用菜单（dispatch）记录（action）下来，点了什么菜（type），和数量（data）。<br/>
+3、然后把菜单（ dispatch(action) ）交给了老板（Store），老板就根据菜单上的内容，告诉给厨师（Reducers）让他炒什么菜<br/>
+4、厨师（Reducers）收到老板的指示后，迅速的把菜做好。并端给（return newState）老板（Store）。<br/>
+5、菜放到老板这后，老板（Store）就通知顾客（React Component）来取餐（getState）<br/>
+ - （previousState, action）：顾客如果开始点了一个蛋炒饭，后面又加了一个紫菜汤。
+ - 此时表示蛋炒饭之前的数据（previousState），紫菜汤表示现在的数据（ action）
+
+---
+
+<strong>再来看具体实现的：</strong>
+
+- `Action`：动作的对象，有两个属性
+
+> type：标识属性，值为字符串，唯一，必选参数; <br/>
+ data：数据属性，值类型任意，可选参数
+
+- `Reducer`：用于初始化状态和加工状态
+
+>加工时根据旧的state值和传过来的action;  <br/>
+生成新的state的值，是一个纯函数
+
+ - `Store`：将state、action、reducer联系在一起的对象，相当于指挥者
+
+ > 1. 创建store对象：createStore(reducer);<br/>
+ > 2. 获取state的值：getState()<br/>
+ > 3. 派发动作：dispatch(action)<br/>
+ > 4. 注册监听：subscribe() 当产生新的 state 时，自动调用<br/>
+
+
+#### redux处理异步逻辑
  - 引入中间件去进行处理。thunk、saga的中间件角色
  - 常用的thunk和saga其实只是中间件作用，在action和reducer中间添加一层去进行异步处理，action和reducer的逻辑不变
 
-
 ![HCDtVe.jpg](https://s4.ax1x.com/2022/01/30/HCDtVe.jpg)
+
+
+#### 问题记录
+
+> redux 中dispatch一个方法 return后的值去哪了?
+
+我理解为 dispatch 就是发布，他接受一个 object 发送给 reducer <br/>
+你发布的object 由 action 决定 <br/>
+所以action 是 return 一个 特定的 object <br/>
+你在里面 请求等异步操作 是使用了一个中间件实现的 thunk <br/>
+但最终的你的action 还是返回一个 object <br/>
+object 最终给到 reducer ，<br/>
+一般根据 type 区分 改变 reducer 也就是store <br/>
+一般看到的就是一个switch （action.type）<br/>
+当然你也可以换成 if else 也可以不用type 区分 <br/>
+因为react 是数据驱动，所以 view 就会相应变化 <br/>
+
+另外一个dispatch 可以触发多个 reducer 改变 <br/>
+
+比如你一个 click 事件，“我要获取帖子列表” <br/>
+dispatch（去服务器拿）<br/>
+
+action 一个纯函数，<br/>
+服务器给我数据，拿到之后 <br/>
+return 一个｛type：拿到数据了，data：[...]｝<br/>
+
+然后reducer A 拿到数据了，好！<br/>
+把store.post.push（action.data）<br/>
+
+reducer B 我也关心这个信息 <br/>
+store.hasnewpost = true <br/>

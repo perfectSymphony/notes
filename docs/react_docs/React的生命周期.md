@@ -20,7 +20,7 @@ React的生命周期从广义上分为三个阶段：挂载、渲染、卸载
 因此可以把React的生命周期分为两类：挂载卸载过程和更新过程。
 React的生命周期图:
 
-[![cG5TC8.jpg](https://z3.ax1x.com/2021/04/07/cG5TC8.jpg)](https://imgtu.com/i/cG5TC8)
+![cG5TC8.jpg](https://z3.ax1x.com/2021/04/07/cG5TC8.jpg)
 
 ### 1. 挂载卸载过程
 
@@ -156,4 +156,4 @@ componentDidUpdate(prevProps, prevState) {
 在 React 开启异步渲染模式后，在 render 阶段读取到的 DOM 元素状态并不总是和 commit 阶段相同，这就导致在
 componentDidUpdate 中使用 componentWillUpdate 中读取到的 DOM 元素状态是不安全的，因为这时的值很有可能已经失效了。
 getSnapshotBeforeUpdate 会在最终的 render 之前被调用，也就是说在 getSnapshotBeforeUpdate 中读取到的 DOM 元素状态是可以保证与 componentDidUpdate 中一致的。
-此生命周期返回的任何值都将作为参数传递给componentDidUpdate（）。
+此生命周期返回的任何值都将作为参数传递给componentDidUpdate()。

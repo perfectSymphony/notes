@@ -307,6 +307,14 @@ module.exports = {
           '/review/每日随笔',
           '/review/2022-12',
         ]
+      },
+      {
+        title: '项目管理',  
+        collapsable: true,
+        sidebarDepth: 3,
+        children: [
+          '/project/需求拆分',
+        ]
       }                                                            
     ], // 侧边栏配置
   }

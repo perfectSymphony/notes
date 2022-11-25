@@ -314,6 +314,7 @@ module.exports = {
         sidebarDepth: 3,
         children: [
           '/project/需求拆分',
+          '/project/敏捷基础思想与实践',
         ]
       }                                                            
     ], // 侧边栏配置

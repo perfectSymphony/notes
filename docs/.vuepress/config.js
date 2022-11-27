@@ -315,6 +315,7 @@ module.exports = {
         children: [
           '/project/需求拆分',
           '/project/敏捷基础思想与实践',
+          '/project/大促项目管理课程',
         ]
       }                                                            
     ], // 侧边栏配置

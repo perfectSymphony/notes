@@ -94,9 +94,7 @@ module.exports = {
           '/js_docs/Javascript中的运算符',
           '/js_docs/Javascript清除缓存的几种方法',
           '/js_docs/Javascript问题汇总',
-          '/js_docs/H5图片上传实现',
-          '/js_docs/前端异常捕获与实践',
-          '/js_docs/JS错误收集及解决方案'
+          '/js_docs/H5图片上传实现'
          ],
       },
       {

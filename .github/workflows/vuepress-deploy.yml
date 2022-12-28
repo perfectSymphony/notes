@@ -14,4 +14,4 @@ jobs:
         TARGET_REPO: perfectSymphony/perfectSymphony.github.io
         TARGET_BRANCH: master
         BUILD_SCRIPT: npm install && npm run build
-        BUILD_DIR: docs/.vuepress/dist
+        BUILD_DIR: docs/.vuepress/dist/

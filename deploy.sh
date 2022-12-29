@@ -14,7 +14,7 @@ cd docs/.vuepress/dist
 
 git init
 git add -A
-git commit -m "${msg}"
+git commit -m "deploy"
 
 # 如果发布到 https://<USERNAME>.github.io
 #git remote add origin git@github.com:perfectSymphony/perfectSymphony.github.io.git

@@ -7,23 +7,34 @@ on:
     branches:
       - master
 
-# 工作流
-jobs: 
+# 任务
+jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest #运行在虚拟机环境ubuntu-latest
+    # 服务器环境：最新版 Ubuntu
+    runs-on: ubuntu-latest
+
     strategy:
       matrix:
-        node-version: [10.x]
-    steps: 
-      - name: Checkout # 步骤1
-        uses: actions/checkout@v2 # 使用的动作。格式：userName/repoName。作用：检出仓库，获取源码。 官方actions库：https://github.com/actions
+        node-version: [10.x]   
+
+    steps:
+      # 拉取代码
+      - name: Checkout
+        uses: actions/checkout@v2
+
       - name: Use Node.js ${{ matrix.node-version }} # 步骤2
         uses: actions/setup-node@v1 # 作用：安装nodejs
         with:
           node-version: ${{ matrix.node-version }} # 版本
-      - name: run deploy.sh # 步骤3 （同时部署到github和coding）
-        env: # 设置环境变量
+      # 生成静态文件
+      - name: run deploy.sh
+        env: 
           GITHUB: ${{ secrets.ACCESS_TOKEN }} # toKen私密变量
-          # CODING: ${{ secrets.CODING_TOKEN }} # 腾讯云开发者平台（coding）私密token
-          run: npm install && npm run deploy # 执行的命令  
-        # package.json 中添加 "deploy": "bash deploy.sh"
+        run: npm install && npm run deploy # 执行的命令  
+      # 部署到 GitHub Pages
+      # - name: Deploy
+      #   uses: JamesIves/github-pages-deploy-action@releases/v3
+      #   with:
+      #     ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} # 也就是我们刚才生成的 secret
+      #     BRANCH: master # 部署到 master 分支，因为 master 分支存放的一般是源码，而 gh-pages 分支则用来存放生成的静态文件
+      #     FOLDER: docs/.vuepress/dist # vuepress 生成的静态文件存放的地方

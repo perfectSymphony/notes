@@ -1,7 +1,8 @@
-name: CI
+# name 可以自定义
+name: Deploy GitHub Pages
 
-# 在master分支发生push事件时触发。
-on: 
+# 触发条件：在 push 到 master 分支后，新的 Github 项目 应该都是 main，而之前的项目一般都是 master
+on:
   push:
     branches:
       - master
@@ -10,11 +11,9 @@ on:
 jobs: 
   build-and-deploy:
     runs-on: ubuntu-latest #运行在虚拟机环境ubuntu-latest
-    
     strategy:
       matrix:
         node-version: [10.x]
-
     steps: 
       - name: Checkout # 步骤1
         uses: actions/checkout@v1 # 使用的动作。格式：userName/repoName。作用：检出仓库，获取源码。 官方actions库：https://github.com/actions

@@ -7,11 +7,11 @@ jobs:
     - name: Checkout
       uses: actions/checkout@master
 
-    - name: vuepress-deploy
-      uses: jenkey2011/vuepress-deploy@v1.8.1
+    - name: Build and Deploy
+      uses: jenkey2011/vuepress-deploy@v1.6.1
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         TARGET_REPO: perfectSymphony/perfectSymphony.github.io
         TARGET_BRANCH: master
-        BUILD_SCRIPT: git config --global url."https://".insteadOf git:// && npm install && npm run build
+        BUILD_SCRIPT: npm install && npm run build
         BUILD_DIR: docs/.vuepress/dist/

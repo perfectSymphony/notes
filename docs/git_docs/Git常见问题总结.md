@@ -17,7 +17,7 @@ $ git remote add origin git@github.com:FBing/java-code-generator
 3、如果执行 git remote rm origin 报错的话，我们可以手动修改gitconfig文件的内容
 
 ```sh
-$ vi .git/config
+$ vim .git/config
 ```
 
 ### 二、git在commit时报错fatal: unable to auto-detect email address的解决办法

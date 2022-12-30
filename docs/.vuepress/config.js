@@ -174,7 +174,7 @@ module.exports = {
         sidebarDepth: 3,
         children: [
           '/git_docs/详解git pull和git fetch的区别',
-          '/git_docs/git stash的用法总结',
+          '/git_docs/git使用技巧',
           '/git_docs/linux重启tomcat命令',
           '/git_docs/Git常见问题总结',
           '/git_docs/Mac系统下查看和生成SSH-Key',

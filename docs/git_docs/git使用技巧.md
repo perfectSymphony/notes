@@ -1,6 +1,9 @@
-## git stash的用法总结
+## git使用技巧
 
-## 应用场景
+### 一、git stash用法总结
+
+
+#### 应用场景
 
 经常会遇到这样的场景：当你正在一个分支上做开发任务，现在想切换到另外一个分支上去做一些工作，比如修改bug、继续之前的工作等等。但是，你现在还不想提交你正在进行的工作，这个时候`git stash`命令就排上用场了。具体简单操作：
 
@@ -60,7 +63,7 @@ Dropped stash@{0} (364e91f3f268f0900bc3ee613f9f733e82aaed43)
 
 也可以运行` git stash pop `来重新应用储藏，同时立刻将其从堆栈中移走。
 
-## 取消储藏(Un-applying a Stash)
+#### 取消储藏(Un-applying a Stash)
 
 在某些情况下，想应用储藏的修改，在进行了一些其他的修改后，又要取消之前所应用储藏的修改。Git没有提供类似于 stash unapply 的命令，但是可以通过取消该储藏的补丁达到同样的效果：
 
@@ -83,7 +86,7 @@ $ #... work work work
 $ git stash-unapply
 ```
 
-## 从储藏中创建分支
+#### 从储藏中创建分支
 
 如果你储藏了一些工作，暂时不去理会，然后继续在你储藏工作的分支上工作，你在重新应用工作时可能会碰到一些问题。你会碰到一个归并冲突并且必须去化解它。如果你想用更方便的方法来重新检验你储藏的变更，你可以运行 git stash branch，这会创建一个新的分支，检出你储藏工作时的所处的提交，重新应用你的工作，如果成功，将会丢弃储藏。
 
@@ -106,7 +109,7 @@ Dropped refs/stash@{0} (f0dfc4d5dc332d1cee34a634182e168c4efc3359)
 
 这是一个很棒的捷径来恢复储藏的工作然后在新的分支上继续当时的工作。
 
-## git stash 暂存部分文件
+#### git stash 暂存部分文件
 
 ```sh
 git stash
@@ -124,7 +127,7 @@ git stash
 
 -k 或 –-keep-index只备份没有add的文件。示例`git stash save --keep-index "部分文件"`
 
-## git stash使用技巧
+#### git stash使用技巧
 
 常规 git stash 的一个限制是它会一下暂存所有的文件。有时，只备份某些文件更为方便，让另外一些与代码库保持一致。一个非常有用的技巧，用来备份部分文件：
 
@@ -132,4 +135,22 @@ git stash
 - 调用 git stash -–keep-index。只会备份那些没有被add的文件。
 - 调用 git reset 取消已经add的文件的备份，继续自己的工作。
 
+### 二、git使用技巧
 
+#### Mac配置SourceTree SSH Key
+ 
+- 查看SSH公钥
+- 将ssh key添加到sourceTree
+
+```javascript
+ssh-add ~/.ssh/id_ed25519
+ssh-add ~/.ssh/id_rsa
+```
+- 将sshkey添加到钥匙串
+
+```javascript
+ssh-add -K ~/.ssh/id_ed25519
+ssh-add -K ~/.ssh/id_rsa
+```
+
+git config --global credential.helper store

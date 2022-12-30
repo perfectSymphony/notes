@@ -9,12 +9,12 @@ module.exports = {
   markdown: {
     lineNumbers: true // 代码块显示行号
   },
-  plugins:{
+  plugins:[
     // 鼠标点击特效
-    "meting": {
+    'meting',
+     {
+      metingApi:'https://music.163.com/#/artist?id=6731',
       meting: {
-        //放会员歌曲的话，只能30s，所以霉霉、Beatles这种的就别放了
-        auto: 'https://music.163.com/#/artist?id=6731',
         // 当前服务为netease -> 网易
         server: "netease",
         // 类型为歌单
@@ -32,8 +32,9 @@ module.exports = {
         // 自动播放
         autoplay: true
       },
+      defaultCover: 'https://nyakku.moe/avatar.jpg',
     },    
-  },
+  ],
   themeConfig: {
     lastUpdated: '上次更新时间',
     smoothScroll: true,

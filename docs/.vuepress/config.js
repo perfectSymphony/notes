@@ -5,7 +5,7 @@ module.exports = {
     ['link', { rel: 'icon', href: '/home.jpeg' }],
   ],
   serviceWorker: true, // 是否开启 PWA
-  base: '/', // 这是部署到github相关的配置
+  base: '/nontes/', // 这是部署到github相关的配置
   markdown: {
     lineNumbers: true // 代码块显示行号
   },

@@ -12,16 +12,18 @@ cd docs/.vuepress/dist
 # 如果是发布到自定义域名
 # echo 'www.example.com' > CNAME
 
-git config --global user.email "2066309334@qq.com"
-git config --global user.name "perfectSymphony"
+# git config --global user.email "2066309334@qq.com"
+# git config --global user.name "perfectSymphony"
 
 git init
 git add -A
 git commit -m "deploy"
 
 # 如果发布到 https://<USERNAME>.github.io
-#git remote add origin git@github.com:perfectSymphony/perfectSymphony.github.io.git
+git remote add origin git@github.com:perfectSymphony/notes.git
 #git push -u origin master
+
+git branch -M master
 
 git push -f git@github.com:perfectSymphony/perfectSymphony.github.io.git master
 
@@ -29,4 +31,3 @@ git push -f git@github.com:perfectSymphony/perfectSymphony.github.io.git master
 # git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
 
 cd -
-rm -rf docs/.vuepress/dist

@@ -6,7 +6,7 @@ on:
   push:
     branches:[master]
   # 手动触发部署
-  workflow_dispatch: false
+  workflow_dispatch: 
 
 # 任务
 jobs:

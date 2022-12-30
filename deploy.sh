@@ -20,10 +20,10 @@ git add -A
 git commit -m "deploy"
 
 # 如果发布到 https://<USERNAME>.github.io
-git remote add origin git@github.com:perfectSymphony/perfectSymphony.github.io.git
+# git remote add origin git@github.com:perfectSymphony/perfectSymphony.github.io.git
 #git push -u origin master
 
-git branch -M master
+# git branch -M master
 
 git push -f git@github.com:perfectSymphony/perfectSymphony.github.io.git master
 

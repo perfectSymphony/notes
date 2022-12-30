@@ -9,6 +9,31 @@ module.exports = {
   markdown: {
     lineNumbers: true // 代码块显示行号
   },
+  plugins:{
+    // 鼠标点击特效
+    "meting": {
+      meting: {
+        //放会员歌曲的话，只能30s，所以霉霉、Beatles这种的就别放了
+        auto: 'https://music.163.com/#/artist?id=6731',
+        // 当前服务为netease -> 网易
+        server: "netease",
+        // 类型为歌单
+        type: "playlist",
+        // 歌单id
+        mid: "6731",
+      },
+      aplayer: {
+        // 0为不显示歌词
+        lrcType: 3,
+        // 音量
+        volume: 0.15,
+        // 开启迷你模式
+        mini: true,
+        // 自动播放
+        autoplay: true
+      },
+    },    
+  },
   themeConfig: {
     lastUpdated: '上次更新时间',
     smoothScroll: true,

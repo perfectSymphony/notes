@@ -55,7 +55,7 @@ jobs:
         with: 
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: docs/.vuepress/dist/ # vuepress 生成的静态文件存放的位置
+          FOLDER: docs/.vuepress/dist/notes/ # vuepress 生成的静态文件存放的位置
 
       # 部署到 GitHub Pages
       # - name: Deploy

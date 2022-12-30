@@ -15,6 +15,8 @@ cd docs/.vuepress/dist
 # git config --global user.email "2066309334@qq.com"
 # git config --global user.name "perfectSymphony"
 
+git pull --rebase origin master
+
 git init
 git add -A
 git commit -m "deploy"

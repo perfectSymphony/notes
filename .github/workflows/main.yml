@@ -10,28 +10,55 @@ on:
 
 # 任务
 jobs:
-  build-and-deploy:
+  docs:
     # 服务器环境：最新版 Ubuntu
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [10.x]   
 
     steps:
       # 拉取代码
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+          # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
+          fetch-depth: 0
 
-      - name: Use Node.js ${{ matrix.node-version }} # 步骤2
+      - name: Setup Node.js # 步骤2
         uses: actions/setup-node@v1 # 作用：安装nodejs
         with:
-          node-version: ${{ matrix.node-version }} # 版本
+          # 选择要使用的 node 版本
+          node-version: "14" # 版本
+          
+      # 缓存 node_modules
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        id: yarn-cache
+        with:
+          path: |
+          **/node_modules
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      # 如果缓存没有命中，安装依赖
+      - name: Install dependencies
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
+        run: yarn
+
+      # 运行构建脚本
+      - name: Build VuePress site
+        run: yarn run build
+
+      # 查看 workflow 的文档来获取更多信息
+      # @see https://github.com/crazy-max/ghaction-github-pages 
+
       # 生成静态文件
-      - name: run deploy.sh
-        env: 
-          GITHUB: ${{ secrets.ACCESS_TOKEN }} # toKen私密变量
-        run: npm install && npm run deploy # 执行的命令  
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with: 
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: master
+          FOLDER: docs/.vuepress/dist # vuepress 生成的静态文件存放的位置
+
       # 部署到 GitHub Pages
       # - name: Deploy
       #   uses: JamesIves/github-pages-deploy-action@releases/v3

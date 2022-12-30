@@ -54,8 +54,8 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with: 
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: docs/.vuepress/dist # vuepress 生成的静态文件存放的位置
+          BRANCH: master
+          FOLDER: docs/.vuepress/dist/ # vuepress 生成的静态文件存放的位置
 
       # 部署到 GitHub Pages
       # - name: Deploy

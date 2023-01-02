@@ -11,7 +11,10 @@
   "author": "perfectSymphony",
   "license": "ISC",
   "devDependencies": {
+    "@vuepress-reco/vuepress-plugin-kan-ban-niang": "^1.0.5",
     "vuepress": "^1.8.2",
+    "vuepress-plugin-cursor-effects": "^1.1.6",
+    "vuepress-plugin-go-top": "^1.0.4",
     "vuepress-plugin-meting": "^0.3.3"
   }
 }

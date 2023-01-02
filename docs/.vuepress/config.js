@@ -9,32 +9,49 @@ module.exports = {
   markdown: {
     lineNumbers: true // 代码块显示行号
   },
-  plugins:[
-    // 鼠标点击特效
-    'meting',
-     {
-      metingApi:'https://music.163.com/#/artist?id=6731',
-      meting: {
-        // 当前服务为netease -> 网易
-        server: "netease",
-        // 类型为歌单
-        type: "playlist",
-        // 歌单id
-        mid: "6731",
+  plugins: [
+    ['@vuepress/last-updated'],
+    ['go-top'],
+    // 鼠标特效插件
+    [
+      'cursor-effects',
+      {
+        size: 5,
+        shape: 'star',
       },
-      aplayer: {
-        // 0为不显示歌词
-        lrcType: 3,
-        // 音量
-        volume: 0.15,
-        // 开启迷你模式
-        mini: true,
-        // 自动播放
-        autoplay: true
+    ],
+    // Meting 插件
+    [
+      'meting',
+      {
+        metingApi: 'https://api.injahow.cn/meting/',
+        meting: {
+          auto: 'https://music.163.com/#/playlist?id=6838211960'
+        },
+        aplayer: {
+          lrcType: 3,
+        },
+        defaultCover: 'https://nyakku.moe/avatar.jpg',
       },
-      defaultCover: 'https://nyakku.moe/avatar.jpg',
-    },    
-  ],
+    ],
+    ['@vuepress-reco/vuepress-plugin-kan-ban-niang',{
+      theme: ["z16"],
+      clean: false,
+      info: 'https://github.com/mengqiuleo',
+      height: 500,
+      modelStyle: {
+        right: '10px',
+        bottom: '20px',
+        opacity: '0.8'
+      },
+      messages: {
+        welcome: '欢迎来到 ' +`{$site.title}`,
+        home: '心里的花，我想要带你回家',
+        theme: '好吧，希望你能喜欢我的其他小伙伴。',
+        close: '再见哦'
+      }
+    }]
+ ],
   themeConfig: {
     lastUpdated: '上次更新时间',
     smoothScroll: true,

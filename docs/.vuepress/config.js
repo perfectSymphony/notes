@@ -36,7 +36,7 @@ module.exports = {
     ],
     ['@vuepress-reco/vuepress-plugin-kan-ban-niang',{
       theme: ["z16"],
-      clean: false,
+      clean: true,
       info: 'https://github.com/mengqiuleo',
       height: 500,
       modelStyle: {

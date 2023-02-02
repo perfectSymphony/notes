@@ -20,20 +20,6 @@ module.exports = {
         shape: 'star',
       },
     ],
-    // Meting 插件
-    [
-      'meting',
-      {
-        metingApi: 'https://api.injahow.cn/meting/',
-        meting: {
-          auto: 'https://music.163.com/#/playlist?id=6838211960'
-        },
-        aplayer: {
-          lrcType: 3,
-        },
-        defaultCover: 'https://nyakku.moe/avatar.jpg',
-      },
-    ],
     ['@vuepress-reco/vuepress-plugin-kan-ban-niang',{
       theme: ["z16"],
       clean: true,

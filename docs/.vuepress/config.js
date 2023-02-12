@@ -336,7 +336,7 @@ module.exports = {
         sidebarDepth: 3,
         children: [
           '/review/每日随笔',
-          '/review/2022-12',
+          '/review/2023-02',
         ]
       },
       {

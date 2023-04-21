@@ -337,6 +337,7 @@ module.exports = {
         children: [
           '/review/每日随笔',
           '/review/2023-02',
+          '/review/2023-04',
         ]
       },
       {

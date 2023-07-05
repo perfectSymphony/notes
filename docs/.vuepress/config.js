@@ -348,6 +348,7 @@ module.exports = {
           '/project/需求拆分',
           '/project/敏捷基础思想与实践',
           '/project/大促项目管理课程',
+          '/project/常见工作问题总结',
         ]
       }                                                            
     ], // 侧边栏配置

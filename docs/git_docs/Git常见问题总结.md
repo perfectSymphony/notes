@@ -60,7 +60,7 @@ npm audit fix --dry-run --json
 npm audit --json
 ```
 
-### Mac下彻底卸载node和npm
+### 三、Mac下彻底卸载node和npm
 
 1、使用brew安装的，可以使用`brew uninstall node`
 
@@ -89,3 +89,22 @@ sudo rm -rf /usr/local/lib/node \
 但是还有好多基于node安装的一堆软件和命令行工具，也需要重新安装，例如 react-native, supervisor,pm2 etc
 需要删除/usr/local/bin 下面相关的文件，其实它们只是些软连接，正主都在 /usr/local/lib/node_modules/ 目录下。
 在之前的步骤中，已经被删除了，但是按 tab键还能找到，就是因为这些软连接还存在
+
+### 四、解决mac电脑github无法访问
+
+第一步，打开终端输入 `sudo vim etc/hosts`
+
+第二步， 把下面这段代码放在hosts文件里面
+```sh
+# add github.com
+
+140.82.121.4 github.com
+
+199.232.69.194 github.global.ssl.fastly.net
+
+# github.com end
+```
+保存退出
+
+第三步，查看是否生效，`ping github.com` 如下图：
+![pC6IqhR.png](https://s1.ax1x.com/2023/07/06/pC6IqhR.png)

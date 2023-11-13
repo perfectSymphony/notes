@@ -329,6 +329,7 @@ module.exports = {
           '/philosophy/语录篇二',
           '/philosophy/语录篇三',
           '/philosophy/语录篇四',
+          '/philosophy/鬼谷子'
         ]
       }, 
       {

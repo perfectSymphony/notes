@@ -108,3 +108,7 @@ sudo rm -rf /usr/local/lib/node \
 
 第三步，查看是否生效，`ping github.com` 如下图：
 ![pC6IqhR.png](https://s1.ax1x.com/2023/07/06/pC6IqhR.png)
+
+
+### 五、登录github需要输入Recovery code和 Authentication code
+在电脑中找到`github-recovery-codes.txt`和`github-recovery-codes.txt`,然后复制里面的code值登录或者手机下载`authenticator`应用。

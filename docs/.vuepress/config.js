@@ -10,14 +10,26 @@ module.exports = {
     lineNumbers: true // 代码块显示行号
   },
   plugins: [
-    ['@vuepress/last-updated'],
+    [
+      '@vuepress/last-updated',
+      // {
+      //   transformer:(timestamp, lang) => {
+      //     // 不要忘了安装 moment
+      //     const moment = require('moment')
+      //     console.log(moment,'moment')
+      //     console.log(moment.locale(lang),'lang')
+      //     moment.locale(lang)
+      //     return moment(timestamp).fromNow()
+      //   }
+      // }
+    ],
     ['go-top'],
     // 鼠标特效插件
     [
       'cursor-effects',
       {
-        size: 5,
-        shape: 'star',
+        size: 2,
+        shape: 'nostar',
       },
     ],
     ['@vuepress-reco/vuepress-plugin-kan-ban-niang',{
@@ -39,7 +51,7 @@ module.exports = {
     }]
  ],
   themeConfig: {
-    lastUpdated: '上次更新时间',
+    lastUpdated: '最后更新时间',
     smoothScroll: true,
     repo: 'https://github.com/perfectSymphony/notes.git',
     docsRepo: 'https://github.com/perfectSymphony/notes',

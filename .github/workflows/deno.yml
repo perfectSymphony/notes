@@ -25,7 +25,8 @@ jobs:
         uses: actions/setup-node@v1 # 作用：安装nodejs
         with:
           # 选择要使用的 node 版本
-          node-version: "20" # 版本
+          # node-version: "20" # 版本
+          node-version: ${{ github.event.inputs.node_version || 'lts/*' }} # 版本
           
       # 缓存 node_modules
       - name: Cache dependencies

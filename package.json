@@ -17,6 +17,8 @@
     "vuepress-plugin-go-top": "^1.0.4"
   },
   "dependencies": {
-    "moment": "^2.30.1"
+    "minimatch": "^10.0.3",
+    "moment": "^2.30.1",
+    "url-loader": "^4.1.1"
   }
 }

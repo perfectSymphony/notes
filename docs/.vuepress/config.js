@@ -362,7 +362,7 @@ module.exports = {
         sidebarDepth: 3,
         children: [
           '/project/需求拆分',
-          '/project/敏捷基础思想与实践',
+          '/project/敏捷思想与实践',
           '/project/大促项目管理课程',
           '/project/常见面试问题总结一',
           '/project/常见面试问题总结二',

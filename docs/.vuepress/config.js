@@ -146,6 +146,7 @@ module.exports = {
         sidebarDepth: 3,
         children: [
           '/tools/工具汇总',
+          '/tools/书单',
         ]
       },      
       {

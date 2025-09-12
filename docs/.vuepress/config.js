@@ -366,7 +366,6 @@ module.exports = {
           '/project/敏捷思想与实践',
           '/project/大促项目管理课程',
           '/project/常见面试问题总结一',
-          '/project/常见面试问题总结二',
           '/project/项目经理常见名词解释',
           '/project/项目管理之人工智能'
         ]

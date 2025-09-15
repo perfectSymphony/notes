@@ -365,9 +365,9 @@ module.exports = {
           '/project/需求拆分',
           '/project/敏捷思想与实践',
           '/project/大促项目管理课程',
-          '/project/常见面试问题总结一',
-          '/project/项目经理常见名词解释',
-          '/project/项目管理之人工智能'
+          '/project/面试题总结',
+          '/project/名词解释',
+          '/project/AI项目管理'
         ]
       }                                                            
     ], // 侧边栏配置

@@ -66,8 +66,21 @@ module.exports = {
     ],
     sidebar: [
       {
+        title: '项目管理',  
+        collapsable: false,
+        sidebarDepth: 3,
+        children: [
+          '/project/需求拆分',
+          '/project/敏捷团队运行指南',
+          '/project/大促项目管理课程',
+          '/project/面试题总结',
+          '/project/名词解释',
+          '/project/AI项目管理'
+        ]
+      },      
+      {
         title: 'HTML',   // 必要的
-        collapsable: false, // 可选的, 默认值是 true,
+        collapsable: true, // 可选的, 默认值是 true,
         sidebarDepth: 3,    // 可选的, 默认值是 1
         children: [
           '/html_docs/html相关面试题',
@@ -355,19 +368,6 @@ module.exports = {
           '/review/每日随笔',
           '/review/2023-02',
           '/review/2023-04',
-        ]
-      },
-      {
-        title: '项目管理',  
-        collapsable: true,
-        sidebarDepth: 3,
-        children: [
-          '/project/需求拆分',
-          '/project/敏捷团队运行指南',
-          '/project/大促项目管理课程',
-          '/project/面试题总结',
-          '/project/名词解释',
-          '/project/AI项目管理'
         ]
       }                                                            
     ], // 侧边栏配置

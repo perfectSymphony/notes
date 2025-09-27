@@ -1,9 +1,9 @@
 ---
 home: true
 heroImage: /bg.jpeg
-heroText: perfectSymphony  ∂  博客
+heroText: perfectSymphony  ∂  知识图谱
 tagline: 
-actionText: 快速上手 →
+actionText: 织  网
 actionLink: /guide/guide
 features:
 # - title: 

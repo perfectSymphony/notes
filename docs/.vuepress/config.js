@@ -1,6 +1,6 @@
 module.exports = {
   title: 'perfectSymphony',
-  description: '我的个人网站',
+  description: '个人网络',
   head: [ // 注入到当前页面的 HTML <head> 中的标签
     ['link', { rel: 'icon', href: '/home.jpeg' }],
   ],

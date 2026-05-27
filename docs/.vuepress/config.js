@@ -323,8 +323,7 @@ module.exports = {
         collapsable: true,
         sidebarDepth: 3,
         children: [
-          '/RegEx/前端常用60余种工具方法',
-          '/RegEx/gemini.html'
+          '/RegEx/前端常用60余种工具方法'
         ]
       },     
       {
